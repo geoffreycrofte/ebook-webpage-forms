@@ -1,0 +1,228 @@
+:root {
+    --color-title: #F0E7E1;
+    --color-text: #D6CEC9;
+    --color-hovertitle: #DB439E;
+    --bg-body: #27364D;
+    --bg-darker: #1E2C42;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::-moz-selection {
+    background: #A40162;
+    color: #F0E7E1;
+}
+
+::selection {
+    background: #A40162;
+    color: #F0E7E1;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--color-text);
+    background: var(--bg-body);
+    line-height: 1.7;
+}
+
+h1,
+h2 {
+    line-height: 1.4;
+    color: var(--color-title);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h2 .small {
+    display: block;
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1.25rem;
+    color: var(--color-text);
+}
+
+.hovertitle {
+    margin-bottom: -1rem;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    word-spacing: 0.1em;
+    font-weight: 900;
+    color: var(--color-hovertitle);
+}
+
+.alternate {
+    background: #F0E7E1;
+    --color-hovertitle: #A40162;
+    --color-title: var(--bg-body);
+    --color-text: var(--bg-darker);
+}
+
+/* Grid system */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    gap: 80px;
+    padding: 40px 24px;
+}
+
+.container.centered {
+    align-items: center;
+}
+
+.col {
+    flex-basis: auto;
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+
+.col-small {
+    flex-basis: 320px;
+}
+
+/* Specific blocks */
+.banner {
+    padding: 60px 0 80px;
+}
+
+.form {
+    flex-basis: 320px;
+    flex-shrink: 0;
+}
+
+.form .legal {
+    font-size: .875rem;
+    line-height: 1.4;
+    opacity: 0.8;
+}
+
+.form label {
+    display: block;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.form label span {
+    opacity: 0.8;
+    font-weight: normal;
+    font-size: small;
+}
+
+.form input {
+    padding: 8px;
+    font-size: inherit;
+    font-family: inherit;
+    border: 2px solid var(--color-title);
+    transition: all .3s;
+    border-radius: 4px;
+}
+
+.form input:focus {
+    border-color: var(--color-hovertitle);
+}
+
+.button {
+    padding: 12px 16px;
+    font-size: 1rem;
+    font-weight: bold;;
+    background: var(--color-hovertitle);
+    color: white;
+    border: 0;
+    border-radius: 80px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.button:hover,
+.button:focus-visible {
+    background: #680440;
+}
+
+/* Book Styles */
+.book-container {
+    --book-height: 284px;
+    --book-width: 200px;
+    --book-depth: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(var(--book-width) * 2);
+    height: calc(var(--book-height) * 1.5);
+    transform-style: preserve-3d;
+    perspective: calc(var(--book-width) * 2);
+
+    transition: all 1s ease;
+    user-select: none;
+}
+
+.book {
+    position: relative;
+    width: var(--book-width);
+    height: var(--book-height);
+    transform: rotateY(-30deg);
+    perspective: 660px;
+    transition: all 1s ease;
+}
+
+.book-container:hover .book {
+    perspective: 0;
+    transform: rotateY(0);
+}
+
+.book-container:hover .book img {
+    box-shadow: 0 2px 4px 4px rgba(0, 0, 0, .1);
+}
+
+/* Pages */
+.book::before {
+    content: '';
+    position: absolute;
+    background: repeating-linear-gradient(to right, white, #888 1px, white 2px);
+    top: 3px;
+    bottom: 3px;
+    right: calc(var(--book-depth) / 2 * -1);
+    width: var(--book-depth);
+    transform: rotateY(70deg) translateX(calc(var(--book-depth) / 2));
+    z-index: -1;
+}
+
+/* Back Page */
+.book::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.7);
+    transform: translateZ(calc(var(--book-depth) * -1)) translateX(calc(var(--book-depth) / 2 - 3px));
+    z-index: -2;
+    transition: transform 1s ease;
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: -4px 4px 8px 8px rgba(0, 0, 0, .2);
+    transition: box-shadow 1s;
+}
