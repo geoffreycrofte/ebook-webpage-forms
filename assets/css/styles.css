@@ -52,9 +52,44 @@ h2 .small {
     font-size: 1.25rem;
 }
 
+
+ol {
+    margin: 3em auto;
+    padding: 0 0 0 0;
+    counter-reset: ol;
+}
+
+ol li {
+    position: relative;
+    counter-increment: ol;
+    list-style: none;
+    font-size: 1.25rem;
+    margin: 1em 0;
+    padding-left: 2.5em;
+}
+
+ol li::before {
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.75em;
+    height: 1.75em;
+    content: counter(ol);
+    background: #46B7B2;
+    font-weight: bold;
+    color: var(--bg-darker);
+    border-radius: 80px;
+}
+
 p {
     font-size: 1.25rem;
     color: var(--color-text);
+}
+
+a {
+    color: inherit;
 }
 
 .hovertitle {
@@ -72,6 +107,33 @@ p {
     --color-hovertitle: #A40162;
     --color-title: var(--bg-body);
     --color-text: var(--bg-darker);
+}
+
+.sr-only {
+    position: absolute;
+    inset: 0 0 0 -9999em;
+    clip-path: polygon(0 0);
+}
+
+[href*="twitter.com"],
+[href*="linkedin.com"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin: .5em .5em .5em 0;
+    background: rgba(255,255,255,.2);
+    border-radius: 40px;
+    transition: all .3s;
+}
+
+[href*="twitter.com"]:hover,
+[href*="linkedin.com"]:hover,
+[href*="twitter.com"]:focus-visible,
+[href*="linkedin.com"]:focus-visible {
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 0 0 4px rgba(255,255,255,.4);
 }
 
 /* Grid system */
@@ -95,7 +157,8 @@ p {
 }
 
 .col-small {
-    flex-basis: 320px;
+    display: block;
+    width: 640px;
 }
 
 /* Specific blocks */
@@ -225,4 +288,35 @@ p {
     border-radius: 4px;
     box-shadow: -4px 4px 8px 8px rgba(0, 0, 0, .2);
     transition: box-shadow 1s;
+}
+
+.footer {
+    text-align: center;
+    padding: 24px 0;
+}
+
+.footer a {
+    display: inline-block;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+@media (max-width: 800px) {
+    .banner {
+        padding: 20px 0; 
+    }
+    .container {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .container > * {
+        flex-basis: 100%;
+    }
+
+    .form input {
+        width: 100%;
+    }
 }
