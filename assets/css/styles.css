@@ -5,6 +5,13 @@
     --bg-body: #27364D;
     --bg-darker: #1E2C42;
 
+    --color-positive: #46B7B2;
+
+    --success-text: #117742;
+    --success-bg: #F1FCF3;
+    --error-text: #841616;
+    --error-bg: #FDF7F7;
+
     --max-width: 1140px;
 }
 
@@ -79,7 +86,7 @@ ol li::before {
     width: 1.75em;
     height: 1.75em;
     content: counter(ol);
-    background: #46B7B2;
+    background: var(--color-positive);
     font-weight: bold;
     color: var(--bg-darker);
     border-radius: 80px;
@@ -219,6 +226,24 @@ a {
 
 .form input:focus {
     border-color: var(--color-hovertitle);
+}
+
+.form .sendfox-message {
+    padding: 16px;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form .sendfox-message.success {
+    color: var(--success-text);
+    background: var(--success-bg);
+    border: 2px solid var(--success-text);
+}
+
+.form .sendfox-message.error {
+    color: var(--error-text);
+    background: var(--error-bg);
+    border: 2px solid var(--error-text);
 }
 
 .button {
