@@ -405,6 +405,10 @@ section {
     font-size: 1rem;
 }
 
+svg:focus {
+    outline: none;
+}
+
 @media (max-width: 1400px) {
     .cover {
         left: -200px;
