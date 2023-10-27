@@ -201,6 +201,23 @@
                 </div>
             </section>
 
+            <section id="synopsis" class="light">
+                <div class="container col-small">
+                    <h2>Synopsis du livre</h2>
+                    <p>Chaque jour, des milliards de personnes naviguent sur le web à la recherche d'informations, de produits ou de services. Au cœur de cette expérience numérique se trouvent les formulaires web, ces petites boîtes de dialogue qui nous demandent de renseigner des informations. À première vue, ils semblent simples, mais détrompez-vous&nbsp;: ils sont le pont entre vos visiteurs et vos objectifs en ligne.</p>
+                    
+                    <p>Après <span class="years">14</span> ans à plonger dans l'univers complexe des formulaires web, j'ai découvert un monde fascinant où l'ergonomie, l'accessibilité et la performance se conjuguent pour façonner l'expérience de l'utilisateur. Dans cet ebook, je vais partager avec vous les secrets pour créer des formulaires qui captivent, convertissent et satisfont vos visiteurs.</p>
+    
+                    <p>Imaginez un formulaire qui semble anticiper les besoins de l'utilisateur, qui réduit les erreurs de saisie, qui se charge rapidement sur tous les appareils et qui accueille chaque visiteur, quel que soit son handicap. C'est possible, et c'est exactement ce que nous allons explorer ensemble.</p>
+    
+                    <p>Que vous soyez un professionnel du web, un entrepreneur ou simplement curieux de découvrir les coulisses de la conception des formulaires web, ce livre est fait pour vous. Préparez-vous à plonger dans le monde passionnant de l'ergonomie et de la qualité des formulaires web, où chaque détail compte et où chaque amélioration peut transformer l'expérience de vos utilisateurs.</p>
+    
+                    <p>Êtes-vous prêt à découvrir les secrets des formulaires web qui font la différence&nbsp;? Alors, plongeons ensemble dans ce voyage captivant vers l'accessibilité, la performance et l'excellence&nbsp;!</p>
+                </div>
+                <img src="./img/ameliorez-l-experience-utilisateur-de-vos-formulaire-web-geoffrey-crofte.png" width="1575" height="2229" alt="" class="cover">
+                <img src="./img/ameliorez-l-experience-utilisateur-de-vos-formulaire-web-geoffrey-crofte.png" width="1575" height="2229" alt="" class="cover">
+            </section>
+
             <section id="plan">
                 <div class="container col-small">
                     
@@ -234,6 +251,18 @@
             <p class="copyright">Tous droits réservés - Œuvre auto-éditée. ISBN 978-99959-0-814-0.</p>
         </footer>
     </div>
-</body>
 
+    <script>(function() {
+        let getMonthDifference = function(startDate, endDate) {
+            return (
+                endDate.getMonth() -
+                startDate.getMonth() +
+                12 * (endDate.getFullYear() - startDate.getFullYear())
+            );
+        };
+        console.log(new Date('2009-01-01'));
+        console.log(new Date());
+        document.querySelector('.years').innerHTML = Math.floor( getMonthDifference( new Date('2009-01-01'), new Date() )/12 );
+    })();</script>
+</body>
 </html>

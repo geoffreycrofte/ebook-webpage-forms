@@ -111,11 +111,36 @@ a {
     color: var(--color-hovertitle);
 }
 
-.alternate {
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+.alternate,
+.light {
     background: #F0E7E1;
     --color-hovertitle: #A40162;
     --color-title: var(--bg-body);
     --color-text: var(--bg-darker);
+}
+
+.light {
+    background: #f2f2f2;
+}
+
+.cover {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateX(-45%) translateY(-50%);
+    width: 640px;
+    height: auto;
+}
+
+.cover + .cover {
+    right: 0;
+    left: auto;
+    transform: translateX(45%) translateY(-50%);
 }
 
 .sr-only {
@@ -379,6 +404,30 @@ a {
 .footer p {
     font-size: 1rem;
 }
+
+@media (max-width: 1400px) {
+    .cover {
+        left: -200px;
+    }
+    .cover + .cover {
+        right: -200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .cover {
+        display: block;
+        position: static;
+        transform: none;
+        margin: -2em auto 0;
+        width: 100%;
+        max-width: 400px;
+
+    }
+    .cover + .cover {
+        display: none;
+    }
+} 
 
 @media (max-width: 800px) {
     .book-container {
