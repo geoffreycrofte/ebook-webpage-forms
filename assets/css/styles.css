@@ -2,7 +2,7 @@
     --color-title: #F0E7E1;
     --color-text: #D6CEC9;
     --color-hovertitle: #DB439E;
-    --bg-body: #27364D;
+    --bg-body: #100F20;
     --bg-darker: #1E2C42;
 
     --color-positive: #46B7B2;
@@ -103,7 +103,7 @@ a {
 
 .hovertitle {
     margin-bottom: -1rem;
-    font-size: 1.2em;
+    font-size: 1em;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     word-spacing: 0.1em;
@@ -169,7 +169,7 @@ a {
     max-width: var(--max-width);
     margin: 0 auto;
     gap: 80px;
-    padding: 40px 24px;
+    padding: 80px 24px;
 }
 
 .container.centered {
@@ -189,7 +189,38 @@ a {
 
 /* Specific blocks */
 .banner {
-    padding: 60px 0 80px;
+    position: relative;
+    padding: 24px 0 60px;
+    overflow: hidden;
+}
+
+.banner > * {
+    position: relative;
+    z-index: 10;
+}
+
+.banner p {
+    margin-block: 2em;
+}
+
+.banner-background {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+}
+
+.banner-background-svg-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-65%) translateY(-65%);
+}
+
+.banner-background-svg-2 {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateX(45%) translateY(-50%);
 }
 
 .form {
@@ -224,8 +255,10 @@ a {
     border-radius: 4px;
 }
 
-.form input:focus {
-    border-color: var(--color-hovertitle);
+.form input:focus,
+.form button:focus {
+    outline: 2px solid var(--color-hovertitle);
+    outline-offset: 2px;
 }
 
 .form .sendfox-message {
@@ -355,6 +388,11 @@ a {
     .banner {
         padding: 20px 0; 
     }
+
+    .banner-background-svg-2 {
+        transform: translateX(65%) translateY(-25%);
+    }
+
     .container {
         flex-wrap: wrap;
         gap: 40px;
