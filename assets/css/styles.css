@@ -154,6 +154,7 @@ section {
     max-width: 100%;
     text-align: right;
     margin: -16px auto 0;
+    padding-right: 16px;
     font-size: 16px;
 }
 
@@ -434,13 +435,28 @@ svg:focus {
 } 
 
 @media (max-width: 800px) {
+
+    p {
+        font-size: 1.125rem;
+    }
+
     .book-container {
         width: 100%;
     }
 
     .banner {
-        padding: 20px 0; 
+        padding: 20px 0;
     }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner .hovertitle {
+        font-size: 0.875rem;
+        font-weight: 700;
+    }
+
 
     .banner-background-svg-2 {
         transform: translateX(65%) translateY(-25%);
