@@ -395,7 +395,7 @@ section {
 
 .footer {
     text-align: center;
-    padding: 24px 0;
+    padding: 24px;
 }
 
 .footer a {
@@ -404,6 +404,17 @@ section {
 
 .footer p {
     font-size: 1rem;
+}
+
+.footer img {
+    margin-top: .5em;
+    height: 48px;
+    width: auto;
+}
+
+p.copyright {
+    font-weight: bold;
+    font-size: 0.875rem;
 }
 
 svg:focus {
@@ -436,6 +447,10 @@ svg:focus {
 
 @media (max-width: 800px) {
 
+    .langs.langs {
+        margin:: 16px auto 16px;
+    }
+
     p {
         font-size: 1.125rem;
     }
@@ -460,6 +475,15 @@ svg:focus {
 
     .banner-background-svg-2 {
         transform: translateX(65%) translateY(-25%);
+    }
+
+    .banner .container {
+        gap: 0;
+        padding-block: 24px;
+    }
+
+    .author > a {
+        margin-top: 1em;
     }
 
     .container {
