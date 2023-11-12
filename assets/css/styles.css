@@ -287,12 +287,16 @@ section {
     outline-offset: 2px;
 }
 
+.form button {
+    display: flex;
+    gap: 8px;
+}
+
 .form button.loading:after {
     content: "";
     display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-left: 8px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     border: 2px solid #fff;
     border-color: #fff transparent #fff transparent;
