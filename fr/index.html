@@ -197,7 +197,7 @@
 
                         <p class="legal">En validant l’inscription vous acceptez que je vous recontacte pour recevoir ce contenu éducatif. Vous pouvez vous désinscrire à n’importe quel moment.</p>
 
-                        <p><button type="submit" class="button" aria-label="M’inscrire pour revecoir l’e-book">M’inscrire pour l’e-book</button></p>
+                        <p><button type="submit" class="button" aria-label="M’inscrire pour revecoir l’e-book" id="submit-form">M’inscrire pour l’e-book</button></p>
                     </form>
                     <script src="https://sendfox.com/js/form.js"></script>
 
@@ -265,15 +265,26 @@
         };
         document.querySelector('.years').innerHTML = Math.floor( getMonthDifference( new Date('2009-01-01'), new Date() )/12 );
 
+        // On click, get a loader on the button
+        const submit = document.getElementById('submit-form');
+        submit.addEventListener('click', function(e){
+            submit.classList.add('loading');
+        });
+
         // Check for mutation to translate error or success messages
         const form = document.getElementById('1k0ryy');
         const config = { attributes: false, childList: true, subtree: true };
         const MOcallback = (mutationList, observer) => {
             for (const mutation of mutationList) {
                 if ( mutation.type === "childList" ) {
-                    console.log("childList", mutation);
-                } else if ( mutation.type === "subtree") {
-                    console.log('subtree:', mutation);
+                    const message = document.querySelector('.sendfox-message');
+                    if ( mutation.addedNodes[0].classList.contains('success') ) {
+                        message.innerHTML('Votre inscription est enregistrée. À bientôt.');
+                        message.setAttribute('tabindex', '-1');
+                        message.focus();
+                        message.setAttribute('aria-live', 'polite');
+                        submit.classList.remove('loading');
+                    }
                 }
             }
         };
