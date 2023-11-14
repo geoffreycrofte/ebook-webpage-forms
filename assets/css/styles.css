@@ -29,6 +29,24 @@
     color: #F0E7E1;
 }
 
+.theme-2 {
+    --color-title: #ebfffb;
+    --color-text: #C7E9E1;
+    --color-hovertitle: #278D8B;
+    --bg-body: #001528;
+    --bg-darker: #1E2C42;
+}
+
+.theme-2 ::-moz-selection {
+    background: #024850;
+    color: #fff;
+}
+
+.theme-2 ::selection {
+    background: #024850;
+    color: #fff;
+}
+
 body,
 html {
     margin: 0;
@@ -124,8 +142,16 @@ section {
     --color-text: var(--bg-darker);
 }
 
+.theme-2 .alternate,
+.theme-2 .light {
+    background: #ebfffb;
+    --color-hovertitle: #177970;
+    --color-title: var(--bg-body);
+    --color-text: var(--bg-darker);
+}
+
 .light {
-    background: #f2f2f2;
+    background: #f2e2e2;
 }
 
 .cover {
@@ -242,11 +268,19 @@ section {
     transform: translateX(-65%) translateY(-65%);
 }
 
+.theme-2 .banner-background-svg-1 {
+    transform: scale(0.65) translateX(-75%) translateY(-65%);
+}
+
 .banner-background-svg-2 {
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateX(45%) translateY(-50%);
+}
+
+.theme-2 .banner-background-svg-2 {
+    transform: scale(0.65) translateX(85%) translateY(-70%);
 }
 
 .form {
@@ -453,6 +487,13 @@ svg:focus {
     .cover + .cover {
         right: -200px;
     }
+
+    .theme-2 .banner-background-svg-1 {
+        transform: scale(0.45) translateX(-130%) translateY(-90%);
+    }
+    .theme-2 .banner-background-svg-2 {
+        transform: scale(0.45) translateX(120%) translateY(-100%);
+    }
 }
 
 @media (max-width: 1200px) {
@@ -497,9 +538,15 @@ svg:focus {
         font-weight: 700;
     }
 
-
     .banner-background-svg-2 {
         transform: translateX(65%) translateY(-25%);
+    }
+
+    .theme-2 .banner-background-svg-1 {
+        transform: scale(0.45) translateX(-130%) translateY(-110%);
+    }
+    .theme-2 .banner-background-svg-2 {
+        transform: scale(0.45) translateX(135%) translateY(-65%);
     }
 
     .banner .container {

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ce que les designers doivent savoir sur l'accessibilité - ebook par Geoffrey Crofte</title>
+
+    <meta name="description" content="Embarquez pour un voyage transformateur dans le domaine de l'accessibilité pour les designers, où vous découvrirez des conseils pratiques et des idées actionnables qui vont au-delà de la complexité des règles WCAG & RGAA, rendant plus facile que jamais la création d'expériences numériques inclusives.">
+
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+
+    <meta property="og:type" content="book">
+    <meta property="og:title" content="Ce que les designers doivent savoir sur l'accessibilité">
+    <meta property="og:url" content="https://geoffreycrofte.com/book/what-designers-need-to-know-about-accessibility/fr/">
+    <meta property="og:image"
+        content="https://geoffreycrofte.com/book/what-designers-need-to-know-about-accessibility/fr/img/open-graph.png">
+    <meta property="og:image:width" content="1200" />    
+    <meta property="og:image:height" content="675" />
+    <meta property="og:description"
+        content="Embarquez pour un voyage transformateur dans le domaine de l'accessibilité pour les designers, où vous découvrirez des conseils pratiques et des idées actionnables qui vont au-delà de la complexité des règles WCAG & RGAA, rendant plus facile que jamais la création d'expériences numériques inclusives.">
+    <meta property="book:author" content="Geoffrey Crofte">
+    <meta property="book:release_date" content="2023-05-23">
+    <meta property="book:isbn" content="">
+    <meta property="book:tag" content="design">
+    <meta property="book:tag" content="web">
+    <meta property="book:tag" content="webdesign">
+    <meta property="book:tag" content="ebook">
+    <meta property="book:tag" content="accessibilité">
+    <meta property="book:tag" content="handicap">
+    <meta property="book:tag" content="rgaa">
+    <meta property="book:tag" content="wcag">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@geoffreycrofte" />
+    <meta name="twitter:creator" content="@geoffreycrofte" />
+    <meta name="twitter:title" content="Ce que les designers doivent savoir sur l'accessibilité">
+    <meta name="twitter:description"
+        content="Embarquez pour un voyage transformateur dans le domaine de l'accessibilité pour les designers, où vous découvrirez des conseils pratiques et des idées actionnables qui vont au-delà de la complexité des règles WCAG & RGAA, rendant plus facile que jamais la création d'expériences numériques inclusives.">
+    <meta name="twitter:image" content="https://geoffreycrofte.com/book/what-designers-need-to-know-about-accessibility/fr/img/open-graph.png">
+    <meta name="twitter:image:alt" content="Bientôt disponible en e-book, mi-2024">
+
+    <link rel="alternate" hreflang="en" href="https://geoffreycrofte.com/book/what-designers-need-to-know-about-accessibility/en/" />
+    <link rel="alternate" hreflang="fr" href="https://geoffreycrofte.com/book/what-designers-need-to-know-about-accessibility/fr/" />
+    <link rel="alternate" hreflang="x-default" href="https://geoffreycrofte.com/book/what-designers-need-to-know-about-accessibility/en/" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="../../assets/img/favicons/safari-pinned-tab.svg" color="#a40162">
+    <link rel="shortcut icon" href="../../assets/img/favicons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="E-book - Geoffrey Crofte">
+    <meta name="application-name" content="Geoffrey Crofte">
+    <meta name="msapplication-TileColor" content="#024850">
+    <meta name="msapplication-config" content="../../assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#024850">
+    
+</head>
+
+<body>
+    <div class="site theme-2">
+        <header class="banner" role="banner">
+            <p class="langs"><a href="../en/" title="This website in english" lang="en" hreflang="en" aria-label="This website in english">EN</a> - <a href="../fr/" lang="fr" title="Vous êtes sur la version Française" aria-label="Vous êtes sur la version Française" hreflang="fr" aria-current="page">FR</a></p>
+            <div class="container centered">
+                <div class="banner-text col">
+                    <p class="hovertitle">Product Design</p>
+                    <h1>Ce que les designers doivent savoir sur l'accessibilité</h1>
+                    <p>Embarquez pour un voyage transformateur dans le domaine de l'accessibilité pour les designers, où vous découvrirez des conseils pratiques et des idées actionnables qui vont au-delà de la complexité des règles WCAG & RGAA, rendant plus facile que jamais la création d'expériences numériques inclusives.</p>
+                    <p class="author">
+                        Par <strong><a href="https://geoffreycrofte.com">Geoffrey Crofte</a></strong><br>
+                        <a href="https://twitter.com/geoffreycrofte">
+                            <span class="sr-only">X (Twitter)</span>
+                            <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="presentation">
+                                <path
+                                    d="M8.362 21.1571C17.796 21.1571 22.956 13.3411 22.956 6.56306C22.956 6.34106 22.956 6.12006 22.941 5.90006C23.9448 5.17397 24.8114 4.27494 25.5 3.24506C24.5639 3.65986 23.5708 3.93189 22.554 4.05206C23.6247 3.41104 24.4261 2.40283 24.809 1.21506C23.8022 1.81252 22.7006 2.23357 21.552 2.46006C20.7787 1.63775 19.7559 1.09323 18.6419 0.910775C17.5279 0.72832 16.3848 0.918098 15.3895 1.45074C14.3943 1.98339 13.6023 2.8292 13.1362 3.8573C12.6701 4.8854 12.5558 6.03846 12.811 7.13806C10.7718 7.03583 8.7768 6.50589 6.95564 5.58265C5.13448 4.65941 3.52784 3.36351 2.24 1.77906C1.58409 2.90822 1.3832 4.24492 1.67823 5.517C1.97326 6.78908 2.74202 7.90089 3.828 8.62606C3.01174 8.60187 2.21328 8.38167 1.5 7.98406C1.5 8.00506 1.5 8.02706 1.5 8.04906C1.50032 9.23328 1.91026 10.3809 2.66028 11.2974C3.4103 12.2138 4.45423 12.8426 5.615 13.0771C4.85987 13.283 4.06758 13.3131 3.299 13.1651C3.62676 14.1842 4.26486 15.0755 5.12407 15.7141C5.98328 16.3528 7.02061 16.707 8.091 16.7271C6.27474 18.1545 4.03106 18.9294 1.721 18.9271C1.3129 18.9263 0.905204 18.9016 0.5 18.8531C2.84564 20.3583 5.57491 21.1568 8.362 21.1531"
+                                    fill="#D8E2F1" />
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/geoffreycrofte">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.4491 20.4496H16.8931V14.8805C16.8931 13.5525 16.8694 11.8429 15.0436 11.8429C13.1915 11.8429 12.9081 13.2899 12.9081 14.7838V20.4492H9.35203V8.99689H12.7658V10.562H12.8136C13.1553 9.97782 13.649 9.49726 14.2421 9.17149C14.8352 8.84572 15.5056 8.68693 16.1819 8.71203C19.7861 8.71203 20.4506 11.0828 20.4506 14.167L20.4491 20.4496ZM5.33963 7.43144C4.93148 7.43151 4.53247 7.31055 4.19307 7.08385C3.85367 6.85715 3.58913 6.53489 3.43287 6.15783C3.27661 5.78077 3.23566 5.36584 3.31521 4.96551C3.39477 4.56517 3.59125 4.19743 3.8798 3.90876C4.16835 3.6201 4.53602 3.42348 4.93631 3.34378C5.3366 3.26408 5.75152 3.30488 6.12863 3.46101C6.50573 3.61713 6.82807 3.88158 7.05489 4.22091C7.2817 4.56025 7.40281 4.95922 7.40288 5.36738C7.40293 5.63839 7.34959 5.90675 7.24593 6.15715C7.14227 6.40754 6.99032 6.63507 6.79873 6.82674C6.60714 7.0184 6.37966 7.17045 6.12931 7.27421C5.87895 7.37796 5.61062 7.43139 5.33963 7.43144ZM7.11765 20.4496H3.5579V8.99689H7.11765V20.4496ZM22.222 0.00163516H1.77099C1.30681 -0.00360329 0.859518 0.175663 0.52744 0.500042C0.195362 0.824421 0.00566506 1.26737 0 1.73156V22.2681C0.00547117 22.7325 0.195057 23.1758 0.527123 23.5005C0.85919 23.8252 1.30658 24.0048 1.77099 23.9999H22.222C22.6873 24.0057 23.1359 23.8266 23.4693 23.5019C23.8027 23.1772 23.9936 22.7334 24 22.2681V1.73008C23.9934 1.26497 23.8024 0.821515 23.469 0.497144C23.1356 0.172773 22.6871 -0.00598143 22.222 0.000152822"
+                                    fill="#D8E2F1" />
+                            </svg>
+                        </a>
+                    </p>
+                </div>
+                <div class="banner-image col">
+                    <div class="book-container">
+                        <div class="book">
+                            <img class="book-img" width="817" height="1156" src="img/ce-que-les-designers-doivent-savoir-sur-l-accessibilite-geoffrey-crofte.png" role="presentation" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-background">
+                <svg class="banner-background-svg-1" width="640" height="737" viewBox="0 0 640 737" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.25003 184.567L1.50003 184.134L1.50003 185L1.5 551.5L1.5 552.366L2.25 551.933L319.648 368.683L320.398 368.25L319.648 367.817L2.25003 184.567Z" fill="#034A40" stroke="#034A40"/>
+                    <path d="M319.898 1.99987L319.898 1.13385L319.148 1.56686L1.74998 184.817L0.999981 185.25L1.74998 185.683L319.148 368.933L319.898 369.366L319.898 368.5L319.898 1.99987Z" fill="#106656" stroke="#106656"/>
+                    <path d="M637.348 185.683L638.098 185.25L637.348 184.817L319.949 1.56686L319.199 1.13385L319.199 1.99988L319.199 368.5L319.199 369.366L319.949 368.933L637.348 185.683Z" fill="#003E45" stroke="#003E45"/>
+                    <path d="M636.148 551.933L636.898 552.366V551.5V185V184.134L636.148 184.567L318.75 367.817L318 368.25L318.75 368.683L636.148 551.933Z" fill="#157369" stroke="#157369"/>
+                    <path d="M319.199 735.125L319.199 735.991L319.949 735.558L637.348 552.308L638.098 551.875L637.348 551.442L319.949 368.192L319.199 367.759L319.199 368.625L319.199 735.125Z" fill="#7EC591" stroke="#7EC591"/>
+                    <path d="M1.75011 551.442L1.00011 551.875L1.75011 552.308L319.148 735.558L319.898 735.991L319.898 735.125L319.899 368.625L319.899 367.759L319.149 368.192L1.75011 551.442Z" fill="#2C935E" stroke="#2C935E"/>
+                </svg>
+
+                <svg class="banner-background-svg-2" width="2229" height="2061" viewBox="0 0 2229 2061" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1916 1478.5L1589.5 1672V1302L1916 1478.5Z" fill="#023B46"/>
+                    <path d="M961.762 2060.5L636.501 1855.5L955.503 1670L961.762 2060.5Z" fill="#002030"/>
+                    <path d="M1444 343L1150 117L1453.98 0.00151799L1444 343Z" fill="#2383A4"/>
+                    <path d="M1272 1853.5L1588 2026.5L1592 1672L1272 1853.5Z" fill="#002938"/>
+                    <path d="M1581 1301.5L1897 1474.5L1901 1120L1581 1301.5Z" fill="#002938"/>
+                    <path d="M320.25 202.567L319.5 202.134L319.5 203L319.5 569.5L319.5 570.366L320.25 569.933L637.648 386.683L638.398 386.25L637.648 385.817L320.25 202.567Z" fill="#034A40" stroke="#034A40"/>
+                    <path d="M637.898 19.9999L637.898 19.1338L637.148 19.5669L319.75 202.817L319 203.25L319.75 203.683L637.148 386.933L637.898 387.366L637.898 386.5L637.898 19.9999Z" fill="#106656" stroke="#106656"/>
+                    <path d="M955.348 203.683L956.098 203.25L955.348 202.817L637.949 19.5669L637.199 19.1339L637.199 19.9999L637.199 386.5L637.199 387.366L637.949 386.933L955.348 203.683Z" fill="#003E45" stroke="#003E45"/>
+                    <path d="M954.148 569.933L954.898 570.366V569.5V203V202.134L954.148 202.567L636.75 385.817L636 386.25L636.75 386.683L954.148 569.933Z" fill="#157369" stroke="#157369"/>
+                    <path d="M637.199 753.125L637.199 753.991L637.949 753.558L955.348 570.308L956.098 569.875L955.348 569.442L637.949 386.192L637.199 385.759L637.199 386.625L637.199 753.125Z" fill="#7EC591" stroke="#7EC591"/>
+                    <path d="M319.75 569.442L319 569.875L319.75 570.308L637.148 753.558L637.898 753.991L637.898 753.125L637.899 386.625L637.899 385.759L637.149 386.192L319.75 569.442Z" fill="#2C935E" stroke="#2C935E"/>
+                    <path d="M955.25 202.567L954.5 202.134L954.5 203L954.5 569.5L954.5 570.366L955.25 569.933L1272.65 386.683L1273.4 386.25L1272.65 385.817L955.25 202.567Z" fill="#1E747F" stroke="#1E747F"/>
+                    <path d="M1272.9 19.9999L1272.9 19.1338L1272.15 19.5669L954.75 202.817L954 203.25L954.75 203.683L1272.15 386.933L1272.9 387.366L1272.9 386.5L1272.9 19.9999Z" fill="#51B0A2" stroke="#51B0A2"/>
+                    <path d="M1590.35 203.683L1591.1 203.25L1590.35 202.817L1272.95 19.5669L1272.2 19.1339L1272.2 19.9999L1272.2 386.5L1272.2 387.366L1272.95 386.933L1590.35 203.683Z" fill="#47A9A5" stroke="#47A9A5"/>
+                    <path d="M1589.15 569.933L1589.9 570.366V569.5V203V202.134L1589.15 202.567L1271.75 385.817L1271 386.25L1271.75 386.683L1589.15 569.933Z" fill="#4AACA6" stroke="#4AACA6"/>
+                    <path d="M1272.2 753.125L1272.2 753.991L1272.95 753.558L1590.35 570.308L1591.1 569.875L1590.35 569.442L1272.95 386.192L1272.2 385.759L1272.2 386.625L1272.2 753.125Z" fill="#1A587D" stroke="#1A587D"/>
+                    <path d="M954.75 569.442L954 569.875L954.75 570.308L1272.15 753.558L1272.9 753.991L1272.9 753.125L1272.9 386.625L1272.9 385.759L1272.15 386.192L954.75 569.442Z" fill="#278D8B" stroke="#278D8B"/>
+                    <path d="M638.25 752.567L637.5 752.134L637.5 753L637.5 1119.5L637.5 1120.37L638.25 1119.93L955.648 936.683L956.398 936.25L955.648 935.817L638.25 752.567Z" fill="#67B689" stroke="#67B689"/>
+                    <path d="M955.898 570L955.898 569.134L955.148 569.567L637.75 752.817L637 753.25L637.75 753.683L955.148 936.933L955.898 937.366L955.898 936.5L955.898 570Z" fill="#78BF8D" stroke="#78BF8D"/>
+                    <path d="M1273.35 753.683L1274.1 753.25L1273.35 752.817L955.949 569.567L955.199 569.134L955.199 570L955.199 936.5L955.199 937.366L955.949 936.933L1273.35 753.683Z" fill="#9CD1A3" stroke="#9CD1A3"/>
+                    <path d="M1272.15 1119.93L1272.9 1120.37V1119.5V753V752.134L1272.15 752.567L954.75 935.817L954 936.25L954.75 936.683L1272.15 1119.93Z" fill="#2C9C79" stroke="#2C9C79"/>
+                    <path d="M955.199 1303.13L955.199 1303.99L955.949 1303.56L1273.35 1120.31L1274.1 1119.88L1273.35 1119.44L955.949 936.192L955.199 935.759L955.199 936.625L955.199 1303.13Z" fill="#177970" stroke="#177970"/>
+                    <path d="M637.75 1119.44L637 1119.88L637.75 1120.31L955.148 1303.56L955.898 1303.99L955.898 1303.13L955.899 936.625L955.899 935.759L955.149 936.192L637.75 1119.44Z" fill="#024850" stroke="#024850"/>
+                    <path d="M2.25003 752.567L1.50003 752.134L1.50003 753L1.5 1119.5L1.5 1120.37L2.25 1119.93L319.648 936.683L320.398 936.25L319.648 935.817L2.25003 752.567Z" fill="#67B689" stroke="#67B689"/>
+                    <path d="M319.898 570L319.898 569.134L319.148 569.567L1.74998 752.817L0.999981 753.25L1.74998 753.683L319.148 936.933L319.898 937.366L319.898 936.5L319.898 570Z" fill="#78BF8D" stroke="#78BF8D"/>
+                    <path d="M637.348 753.683L638.098 753.25L637.348 752.817L319.949 569.567L319.199 569.134L319.199 570L319.199 936.5L319.199 937.366L319.949 936.933L637.348 753.683Z" fill="#156649" stroke="#156649"/>
+                    <path d="M636.148 1119.93L636.898 1120.37V1119.5V753V752.134L636.148 752.567L318.75 935.817L318 936.25L318.75 936.683L636.148 1119.93Z" fill="#0C604C" stroke="#0C604C"/>
+                    <path d="M319.199 1303.13L319.199 1303.99L319.949 1303.56L637.348 1120.31L638.098 1119.88L637.348 1119.44L319.949 936.192L319.199 935.759L319.199 936.625L319.199 1303.13Z" fill="#002E30" stroke="#002E30"/>
+                    <path d="M1.75011 1119.44L1.00011 1119.88L1.75011 1120.31L319.148 1303.56L319.898 1303.99L319.898 1303.13L319.899 936.625L319.899 935.759L319.149 936.192L1.75011 1119.44Z" fill="#024850" stroke="#024850"/>
+                    <path d="M1591.25 202.567L1590.5 202.134L1590.5 203L1590.5 569.5L1590.5 570.366L1591.25 569.933L1908.65 386.683L1909.4 386.25L1908.65 385.817L1591.25 202.567Z" fill="#166094" stroke="#166094"/>
+                    <path d="M1908.9 19.9999L1908.9 19.1338L1908.15 19.5669L1590.75 202.817L1590 203.25L1590.75 203.683L1908.15 386.933L1908.9 387.366L1908.9 386.5L1908.9 19.9999Z" fill="#184769" stroke="#184769"/>
+                    <path d="M2226.35 203.683L2227.1 203.25L2226.35 202.817L1908.95 19.5669L1908.2 19.1339L1908.2 19.9999L1908.2 386.5L1908.2 387.366L1908.95 386.933L2226.35 203.683Z" fill="#47A9A5" stroke="#47A9A5"/>
+                    <path d="M2225.15 569.933L2225.9 570.366V569.5V203V202.134L2225.15 202.567L1907.75 385.817L1907 386.25L1907.75 386.683L2225.15 569.933Z" fill="#4AACA6" stroke="#4AACA6"/>
+                    <path d="M1908.2 753.125L1908.2 753.991L1908.95 753.558L2226.35 570.308L2227.1 569.875L2226.35 569.442L1908.95 386.192L1908.2 385.759L1908.2 386.625L1908.2 753.125Z" fill="#1C6182" stroke="#1C6182"/>
+                    <path d="M1590.75 569.442L1590 569.875L1590.75 570.308L1908.15 753.558L1908.9 753.991L1908.9 753.125L1908.9 386.625L1908.9 385.759L1908.15 386.192L1590.75 569.442Z" fill="#123762" stroke="#123762"/>
+                    <path d="M1274.25 752.567L1273.5 752.134L1273.5 753L1273.5 1119.5L1273.5 1120.37L1274.25 1119.93L1591.65 936.683L1592.4 936.25L1591.65 935.817L1274.25 752.567Z" fill="#5BB199" stroke="#5BB199"/>
+                    <path d="M1591.9 570L1591.9 569.134L1591.15 569.567L1273.75 752.817L1273 753.25L1273.75 753.683L1591.15 936.933L1591.9 937.366L1591.9 936.5L1591.9 570Z" fill="#1B6A8B" stroke="#1B6A8B"/>
+                    <path d="M1909.35 753.683L1910.1 753.25L1909.35 752.817L1591.95 569.567L1591.2 569.134L1591.2 570L1591.2 936.5L1591.2 937.366L1591.95 936.933L1909.35 753.683Z" fill="#184372" stroke="#184372"/>
+                    <path d="M1908.15 1119.93L1908.9 1120.37V1119.5V753V752.134L1908.15 752.567L1590.75 935.817L1590 936.25L1590.75 936.683L1908.15 1119.93Z" fill="#19566F" stroke="#19566F"/>
+                    <path d="M1591.2 1303.13L1591.2 1303.99L1591.95 1303.56L1909.35 1120.31L1910.1 1119.88L1909.35 1119.44L1591.95 936.192L1591.2 935.759L1591.2 936.625L1591.2 1303.13Z" fill="#043C4D" stroke="#043C4D"/>
+                    <path d="M1273.75 1119.44L1273 1119.88L1273.75 1120.31L1591.15 1303.56L1591.9 1303.99L1591.9 1303.13L1591.9 936.625L1591.9 935.759L1591.15 936.192L1273.75 1119.44Z" fill="#177970" stroke="#177970"/>
+                    <path d="M956.25 1304.57L955.5 1304.13L955.5 1305L955.5 1671.5L955.5 1672.37L956.25 1671.93L1273.65 1488.68L1274.4 1488.25L1273.65 1487.82L956.25 1304.57Z" fill="#177970" stroke="#177970"/>
+                    <path d="M1273.9 1122L1273.9 1121.13L1273.15 1121.57L955.75 1304.82L955 1305.25L955.75 1305.68L1273.15 1488.93L1273.9 1489.37L1273.9 1488.5L1273.9 1122Z" fill="#003A41" stroke="#003A41"/>
+                    <path d="M1591.35 1305.68L1592.1 1305.25L1591.35 1304.82L1273.95 1121.57L1273.2 1121.13L1273.2 1122L1273.2 1488.5L1273.2 1489.37L1273.95 1488.93L1591.35 1305.68Z" fill="#2C9C79" stroke="#2C9C79"/>
+                    <path d="M1590.15 1671.93L1590.9 1672.37V1671.5V1305V1304.13L1590.15 1304.57L1272.75 1487.82L1272 1488.25L1272.75 1488.68L1590.15 1671.93Z" fill="#3FAB7E" stroke="#3FAB7E"/>
+                    <path d="M1273.2 1855.13L1273.2 1855.99L1273.95 1855.56L1591.35 1672.31L1592.1 1671.88L1591.35 1671.44L1273.95 1488.19L1273.2 1487.76L1273.2 1488.62L1273.2 1855.13Z" fill="#002736" stroke="#002736"/>
+                    <path d="M955.75 1671.44L955 1671.88L955.75 1672.31L1273.15 1855.56L1273.9 1855.99L1273.9 1855.13L1273.9 1488.62L1273.9 1487.76L1273.15 1488.19L955.75 1671.44Z" fill="#00313F" stroke="#00313F"/>
+                    <path d="M320.25 1302.57L319.5 1302.13L319.5 1303L319.5 1669.5L319.5 1670.37L320.25 1669.93L637.648 1486.68L638.398 1486.25L637.648 1485.82L320.25 1302.57Z" fill="#00242B" stroke="#00242B"/>
+                    <path d="M637.898 1120L637.898 1119.13L637.148 1119.57L319.75 1302.82L319 1303.25L319.75 1303.68L637.148 1486.93L637.898 1487.37L637.898 1486.5L637.898 1120Z" fill="#00262B" stroke="#00262B"/>
+                    <path d="M955.348 1303.68L956.098 1303.25L955.348 1302.82L637.949 1119.57L637.199 1119.13L637.199 1120L637.199 1486.5L637.199 1487.37L637.949 1486.93L955.348 1303.68Z" fill="#0C604C" stroke="#0C604C"/>
+                    <path d="M954.148 1669.93L954.898 1670.37V1669.5V1303V1302.13L954.148 1302.57L636.75 1485.82L636 1486.25L636.75 1486.68L954.148 1669.93Z" fill="#003A41" stroke="#003A41"/>
+                    <path d="M637.199 1853.13L637.199 1853.99L637.949 1853.56L955.348 1670.31L956.098 1669.88L955.348 1669.44L637.949 1486.19L637.199 1485.76L637.199 1486.62L637.199 1853.13Z" fill="#002231" stroke="#002231"/>
+                    <path d="M319.75 1669.44L319 1669.88L319.75 1670.31L637.148 1853.56L637.898 1853.99L637.898 1853.13L637.899 1486.62L637.899 1485.76L637.149 1486.19L319.75 1669.44Z" fill="#00202D" stroke="#00202D"/>
+                </svg>                    
+            </div>
+        </header>
+
+        <main role="main">
+            <section class="alternate" id="subscribe">
+                <div class="container centered">
+                    <div class="col">
+                        <p class="hovertitle">Bientôt en e-book</p>
+                        <h2>Recevoir l'information dès sa sortie</h2>
+                        <p>Pour ne pas manquer sa sortie et la promotion qui va avec (un e-book aussi complet à 8€ ça ne se loupe pas), fournissez-moi votre adresse e-mail et je vous recontacterai sans faute. Vous ne recevrez jamais de spam de ma part, je n'aime pas cela non plus.&nbsp;😊</p>
+                    </div>
+
+
+                    <form method="post" action="https://sendfox.com/form/3l5yol/1k0ryy" class="sendfox-form form" id="1k0ryy" data-async="true" data-recaptcha="true">
+                        <p>
+                            <label for="sendfox_form_name">Votre prénom</label>
+                            <input type="text" id="sendfox_form_name" autocapitalize="words" autocomplete="given-name" name="first_name" />
+                        </p>
+
+                        <p>
+                            <label for="sendfox_form_email">Email</label>
+                            <input type="email" id="sendfox_form_email" autocapitalize="off" autocomplete="email" name="email" required />
+                        </p>
+
+                        <!-- no botz please -->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="a_password" tabindex="-1" value="" autocomplete="off" /></div>
+
+                        <p class="legal">En validant l’inscription vous acceptez que je vous recontacte pour recevoir ce contenu éducatif. Vous pouvez vous désinscrire à n’importe quel moment.</p>
+
+                        <p><button type="submit" class="button" aria-label="M’inscrire pour revecoir l’e-book" id="submit-form">M’inscrire pour l’e-book</button></p>
+                    </form>
+                    <script src="https://sendfox.com/js/form.js"></script>
+
+                </div>
+            </section>
+
+            <section id="synopsis" class="light">
+                <div class="container col-small">
+                    <h2>Synopsis du livre</h2>
+                    <p>Chaque jour, des milliards de personnes naviguent sur le web à la recherche d'informations, de produits ou de services. Au cœur de cette expérience numérique se trouvent les formulaires web, ces petites boîtes de dialogue qui nous demandent de renseigner des informations. À première vue, ils semblent simples, mais détrompez-vous&nbsp;: ils sont le pont entre vos visiteurs et vos objectifs en ligne.</p>
+                    
+                    <p>Après <span class="years">14</span> ans à plonger dans l'univers complexe des formulaires web, j'ai découvert un monde fascinant où l'ergonomie, l'accessibilité et la performance se conjuguent pour façonner l'expérience de l'utilisateur. Dans cet ebook, je vais partager avec vous les secrets pour créer des formulaires qui captivent, convertissent et satisfont vos visiteurs.</p>
+    
+                    <p>Imaginez un formulaire qui semble anticiper les besoins de l'utilisateur, qui réduit les erreurs de saisie, qui se charge rapidement sur tous les appareils et qui accueille chaque visiteur, quel que soit son handicap. C'est possible, et c'est exactement ce que nous allons explorer ensemble.</p>
+    
+                    <p>Que vous soyez un professionnel du web, un entrepreneur ou simplement curieux de découvrir les coulisses de la conception des formulaires web, ce livre est fait pour vous. Préparez-vous à plonger dans le monde passionnant de l'ergonomie et de la qualité des formulaires web, où chaque détail compte et où chaque amélioration peut transformer l'expérience de vos utilisateurs.</p>
+    
+                    <p>Êtes-vous prêt à découvrir les secrets des formulaires web qui font la différence&nbsp;? Alors, plongeons ensemble dans ce voyage captivant vers l'accessibilité, la performance et l'excellence&nbsp;!</p>
+                </div>
+                <img src="./img/ce-que-les-designers-doivent-savoir-sur-l-accessibilite-geoffrey-crofte.png" width="1575" height="2229" alt="" class="cover">
+                <img src="./img/ce-que-les-designers-doivent-savoir-sur-l-accessibilite-geoffrey-crofte.png" width="1575" height="2229" alt="" class="cover">
+            </section>
+
+            <section id="plan">
+                <div class="container col-small">
+                    
+                    <h2 id="plan-title">Plan de l’e-book <span class="small">“Ce que les designers doivent savoir sur l'accessibilité”</span></h2>
+
+                    <p>Le plan tel que présenté ici pourrait subir des modifications lors de la finalisation de la rédaction de l’ouvrage. C’est tout l’intérêt de proposer un e-book.</p>
+
+                    <ol aria-labelledby="plan-title" class="col plan">
+                        <li>Les définitions possibles d’un formulaire web</li>
+                        <li>Exemples de mauvais usages, de la réalité à l’absurde</li>
+                        <li>Autour du formulaire : existant, formation, et service.</li>
+                        <li>Retour sur les bases ergonomiques d’un champ</li>
+                        <li>Les expériences sur un formulaire web</li>
+                        <li>Formulaires types et solutions types</li>
+                        <li>De l’importance de la recherche utilisateur</li>
+                        <li>Entre ergonomie et accessibilité</li>
+                        <li>Solutions et implémentations techniques</li>
+                        <li>Présent et avenir de nos formulaires</li>
+                    </ol>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer alternate" role="contentinfo">
+            <p>
+                Contenu proposé par<br>
+                <a href="https://geoffreycrofte.com/">
+                    <img src="https://geoffreycrofte.com/logo.svg" loading="lazy" width="283" height="67" alt="Geoffrey Crofte - Lead UX Designer">
+                </a>
+            </p>
+            <p class="copyright">Tous droits réservés - Œuvre auto-éditée. ISBN 978-99959-0-814-0.</p>
+        </footer>
+    </div>
+
+    <script>(function() {
+        let getMonthDifference = function(startDate, endDate) {
+            return (
+                endDate.getMonth() -
+                startDate.getMonth() +
+                12 * (endDate.getFullYear() - startDate.getFullYear())
+            );
+        };
+        document.querySelector('.years').innerHTML = Math.floor( getMonthDifference( new Date('2009-01-01'), new Date() )/12 );
+
+        // On click, get a loader on the button
+        const submit = document.getElementById('submit-form');
+        submit.addEventListener('click', function(e){
+            submit.classList.add('loading');
+        });
+
+        // Check for mutation to translate error or success messages
+        const form = document.getElementById('1k0ryy');
+        const focusMessage = function(message) {
+            message.setAttribute('tabindex', '-1');
+            message.focus();
+            message.setAttribute('aria-live', 'polite');
+            submit.classList.remove('loading');
+        };
+        const config = { attributes: false, childList: true, subtree: true };
+        const MOcallback = (mutationList, observer) => {
+            for (const mutation of mutationList) {
+                if ( mutation.type === "childList" ) {
+                    const message = document.querySelector('.sendfox-message');
+                    if ( mutation.addedNodes[0].classList.contains('success') ) {
+                        message.innerHTML = 'Merci. Votre inscription est enregistrée.';
+                        focusMessage(message);
+                    }
+                    if ( mutation.addedNodes[0].classList.contains('error') ) {
+                        message.innerHTML = 'Mon outil renvoie une erreur, navré pour cela. Pouvez-vous essayer avec une autre adresse e-mail, et si le message persiste, contactez-moi sur monprénom.monnom@gmail.com';
+                        focusMessage(message);
+                    }
+                }
+            }
+        };
+
+        const observer = new MutationObserver(MOcallback);
+        observer.observe(form, config);
+    })();
+    
+    </script>
+</body>
+</html>
