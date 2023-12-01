@@ -1,7 +1,8 @@
 :root {
     --color-title: #F0E7E1;
     --color-text: #D6CEC9;
-    --color-hovertitle: #DB439E;
+    --color-hovertitle: #ce3b93;
+    --color-bg-hover: #680440;
     --bg-body: #100F20;
     --bg-darker: #1E2C42;
 
@@ -31,8 +32,9 @@
 
 .theme-2 {
     --color-title: #ebfffb;
-    --color-text: #C7E9E1;
-    --color-hovertitle: #278D8B;
+    --color-text: #ebfffb;
+    --color-hovertitle: #207f7d;
+    --color-bg-hover: #024850;
     --bg-body: #001528;
     --bg-darker: #1E2C42;
 }
@@ -55,9 +57,12 @@ html {
 
 body {
     font-family: 'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+}
+
+.site {
     color: var(--color-text);
     background: var(--bg-body);
-    line-height: 1.7;
 }
 
 h1,
@@ -144,7 +149,7 @@ section {
 
 .theme-2 .alternate,
 .theme-2 .light {
-    background: #ebfffb;
+    background: #f7faf9;
     --color-hovertitle: #177970;
     --color-title: var(--bg-body);
     --color-text: var(--bg-darker);
@@ -378,7 +383,7 @@ section {
 
 .button:hover,
 .button:focus-visible {
-    background: #680440;
+    background: var(--color-bg-hover);
 }
 
 /* Book Styles */
