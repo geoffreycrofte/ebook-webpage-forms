@@ -53,6 +53,7 @@ body,
 html {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -511,14 +512,35 @@ svg:focus {
     transform: translateX(-64px);
 }
 
-.gallery .cta {
+.cta {
     margin-top: 2.5rem;
 }
 
-.gallery .button {
+.cta .button {
     padding: 16px 24px;
     text-decoration: none;
     font-size: 1.25rem;
+}
+
+.button.is-secondary {
+    background: var(--color-positive);
+    color: var(--bg-body);
+}
+
+.button.is-light {
+    background: rgba(255,255,255,.1);
+    color: white;
+}
+
+.button.is-secondary:hover,
+.button.is-secondary:focus {
+    background: white;
+    color: var(--bg-body);
+}
+
+.button.is-light:hover,
+.button.is-light:focus {
+    background: rgba(255,255,255,.25);
 }
 
 .gallery + footer {
