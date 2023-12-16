@@ -517,7 +517,9 @@ svg:focus {
 }
 
 .cta .button {
-    padding: 16px 24px;
+    display: inline-block;
+    margin: .5em .5em 0 0;
+    padding: 12px 24px;
     text-decoration: none;
     font-size: 1.25rem;
 }
