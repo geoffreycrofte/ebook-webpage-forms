@@ -3,6 +3,8 @@
     --color-text: #D6CEC9;
     --color-hovertitle: #ce3b93;
     --color-bg-hover: #680440;
+    --color-accent-alternate: #4A80F5;
+    --color-common-alternate: #C5C2F4;
     --bg-body: #100F20;
     --bg-darker: #1E2C42;
 
@@ -14,6 +16,8 @@
     --error-bg: #FDF7F7;
 
     --max-width: 1140px;
+    --v-spacing: 120px;
+    --h-spacing: 24px;
 }
 
 * {
@@ -57,7 +61,7 @@ html {
 }
 
 body {
-    font-family: 'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     line-height: 1.7;
 }
 
@@ -125,6 +129,47 @@ a {
     color: inherit;
 }
 
+h2 span {
+    color: var(--color-accent-alternate);
+}
+
+.subtitle {
+    font-size: 1.125rem;
+}
+
+details summary {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 6px;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+}
+
+details summary::after {
+    content: '+';
+    width: 24px;
+    height: 24px;
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 0;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+details[open] summary::after {
+    content: '-';
+}
+
+details p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
 .hovertitle {
     margin-bottom: -1rem;
     font-size: 1em;
@@ -146,6 +191,16 @@ section {
     --color-hovertitle: #A40162;
     --color-title: var(--bg-body);
     --color-text: var(--bg-darker);
+}
+
+.gradient {
+    background: #3C1C83 linear-gradient(to bottom left, #3C1C83, #9D1082);
+}
+
+.accent-alternate {
+    --color-title: var(--color-common-alternate);
+    --color-text: var(--color-common-alternate);
+    --color-accent-alternate: #4A80F5;
 }
 
 .theme-2 .alternate,
@@ -200,7 +255,8 @@ section {
 }
 
 [href*="twitter.com"],
-[href*="linkedin.com"] {
+[href*="linkedin.com"],
+.testimonial-peops-detail a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -215,19 +271,25 @@ section {
 [href*="twitter.com"]:hover,
 [href*="linkedin.com"]:hover,
 [href*="twitter.com"]:focus-visible,
-[href*="linkedin.com"]:focus-visible {
+[href*="linkedin.com"]:focus-visible,
+.testimonial-peops-detail a:hover,
+.testimonial-peops-detail a:focus-visible {
     background: rgba(255, 255, 255, .1);
     box-shadow: 0 0 0 4px rgba(255,255,255,.4);
 }
 
 /* Grid system */
+.banner .container  {
+    padding-block-start: 8px;
+}
+
 .container {
     display: flex;
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
     gap: 80px;
-    padding: 80px 24px;
+    padding: var(--v-spacing) var(--h-spacing);
 }
 
 .container.centered {
@@ -243,6 +305,26 @@ section {
 .col-small {
     display: block;
     max-width: 640px;
+}
+
+.container.centered-layout {
+    display: block;
+}
+
+.centered-layout h2 {
+    text-align: center;
+}
+
+.container.left-layout .decoration img {
+    position: relative;
+    margin-top: 120px;
+}
+
+.left-layout .content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 604px;
 }
 
 /* Specific blocks */
@@ -288,6 +370,78 @@ section {
 .theme-2 .banner-background-svg-2 {
     transform: scale(0.65) translateX(85%) translateY(-70%);
 }
+
+/* Quotes Testimonials */
+
+.quotes,
+.testimonial-peops {
+    display: flex;
+    gap: 16px;
+}
+
+.quotes p {
+    font-size: 1rem;
+}
+
+.quotes blockquote {
+    position: relative;
+    flex-basis: 100%;
+}
+
+blockquote svg {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    transform: translateX(-75%);
+}
+
+.testimonial-peops img {
+    margin-top: 8px;
+    border-radius: 50%;
+}
+
+.testimonial-peops-detail cite {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.testimonial-peops-detail cite a,
+.testimonial-peops-detail p {
+    width: auto;
+    height: auto;
+    margin: 0;
+    background: none;
+    text-decoration: none;
+}
+
+.testimonial-peops-detail cite a:hover,
+.testimonial-peops-detail cite a:focus-visible {
+    outline-offset: 6px;
+    box-shadow: none;
+}
+
+/* Benefits */
+
+.benefits {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.benefits li {
+    position: relative;
+    margin: 2em 0;
+    padding-inline-start: 56px;
+}
+
+.benefits li svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Forms */
 
 .form {
     flex-basis: 320px;
@@ -561,6 +715,51 @@ svg:focus {
     font-weight: bold;
 }
 
+/* Available on block */
+.available-on {
+    position: relative;
+    top: calc(-1 * var(--v-spacing)/4);
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    max-width: 1055px;
+    padding: 32px 40px;
+    margin: calc(-0.5 * var(--v-spacing)) auto calc(-1 * var(--v-spacing));
+    align-items: center;
+    border-radius: 22px;
+    background: #FFF;
+    box-shadow: 0px 8px 48px -16px rgba(0, 0, 0, 0.25);
+}
+
+.available-on p {
+    margin-right: 16px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--bg-darker);
+}
+
+.available-on ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.available-on a {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.available-on + main > section:first-child {
+    padding-top: calc(0.5 * var(--v-spacing));
+}
+
 @media (max-width: 1400px) {
     .cover {
         left: -200px;
@@ -583,12 +782,17 @@ svg:focus {
         position: static;
         transform: none;
         margin: -2em auto 0;
-        width: 100%;
+        width: 90vw;
         max-width: 400px;
+        border-radius: 4px 4px 0 0;
 
     }
     .cover + .cover {
         display: none;
+    }
+
+    .available-on {
+        max-width: 95vw;
     }
 } 
 
@@ -658,5 +862,28 @@ svg:focus {
 
     .form input {
         width: 100%;
+    }
+
+    .decoration .banner-background-svg-2 {
+        top: 65%;
+    }
+
+    /* Available on */
+    .available-on {
+        margin: 0 auto calc(-1 * var(--v-spacing));
+    }
+    .available-on,
+    .available-on ul {
+        flex-wrap: wrap;
+    }
+
+    /* Quotes */
+    .quotes {
+        flex-wrap: wrap;
+    }
+
+    /* Plan */
+    .plan li {
+        font-size: 1rem;
     }
 }

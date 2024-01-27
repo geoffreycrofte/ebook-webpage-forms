@@ -56,6 +56,10 @@
     <meta name="msapplication-TileColor" content="#a40162">
     <meta name="msapplication-config" content="../../assets/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#a40162">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
     
 </head>
 
@@ -71,7 +75,7 @@
                     
                     <p class="cta">
                         <a class="button" href="https://shop.geoffreycrofte.com/b/e-book-formulaire-web-les-erreurs-a-eviter-qui-vous-coutent-cher-geoffrey-crofte">J'achète ce livre</a>
-                        <a class="button is-light" href="#synopsis">Découvrir ce livre</a>
+                        <a class="button is-light" href="#main">Découvrir ce livre</a>
                     </p>
 
                     <p class="author">
@@ -102,6 +106,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="banner-background">
                 <svg class="banner-background-svg-1" tabindex="-1" role="presentation" width="730" height="730" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="365" width="516.188" height="516.188" transform="rotate(45 365 0)" fill="url(#paint0_linear_844_1901)"/>
@@ -178,22 +183,206 @@
             </div>
         </header>
 
-        <main role="main">
+        <aside class="available-on">
+            <p id="available-on-title">Livre disponible sur</p>
+            <ul class="book-shops" aria-labelledby="available-on-title">
+                <li>
+                    <a href="https://shop.geoffreycrofte.com/b/e-book-formulaire-web-les-erreurs-a-eviter-qui-vous-coutent-cher-geoffrey-crofte">
+                        <img width="88" height="88" src="../../assets/img/shop-gc.png" title="Le site de vente officiel de Geoffrey" alt="Le site de vente officiel de Geoffrey">
+                    </a>
+                </li>
+                <li>
+                    <a rel="nofollow" href="https://amzn.to/41WoLSh">
+                        <img width="88" height="88" src="../../assets/img/shop-amazon.png" alt="Le livre sur Amazon">
+                    </a>
+                </li>
+                <li>
+                    <a rel="nofollow" href="https://books.apple.com/fr/book/formulaires-web-les-erreurs-%C3%A0-%C3%A9viter-qui-vous-co%C3%BBtent-cher/id6475645043">
+                        <img width="88" height="88" src="../../assets/img/shop-apple.png" alt="Le livre sur Apple Books">
+                    </a>
+                </li>
+                <li>
+                    <a rel="nofollow" href="https://www.fnac.com/livre-numerique/a19355821/Geoffrey-Crofte-Formulaires-Web-Les-erreurs-a-eviter-qui-vous-coutent-cher#omnsearchpos=1">
+                        <img width="88" height="88" src="../../assets/img/shop-fnac.png" alt="Le livre sur Fnac.com">
+                    </a>
+                </li>
+                <li>
+                    <a rel="nofollow" href="https://www.kobo.com/us/fr/ebook/formulaires-web-les-erreurs-a-eviter-qui-vous-coutent-cher">
+                        <img width="88" height="88" src="../../assets/img/shop-kobo.png" alt="Le livre sur Kobo">
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <main id="main" role="main">
+            <section id="testimonials" class="gradient">
+                <div class="container centered-layout">
+                    <h2>Retours de lecture</h2>
+                    <div class="quotes">
+                        <blockquote>
+                            <svg role="presentation" tabindex="-1" width="68" height="43" viewBox="0 0 68 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M53.1445 42.7734C50.918 42.7734 48.8867 42.4414 47.0508 41.7773C45.2148 41.0742 43.6523 40.1172 42.3633 38.9062C41.0742 37.6562 40.0586 36.1523 39.3164 34.3945C38.6133 32.6367 38.2617 30.6836 38.2617 28.5352C38.2617 26.3086 38.6523 23.9844 39.4336 21.5625C40.2539 19.1406 41.4258 16.6992 42.9492 14.2383C44.4727 11.7773 46.3086 9.35547 48.457 6.97266C50.6445 4.55078 53.125 2.22656 55.8984 0L62.6367 5.27344C61.3477 6.60156 60.1758 7.87109 59.1211 9.08203C58.1055 10.293 57.168 11.5039 56.3086 12.7148C55.4492 13.9258 54.6484 15.1758 53.9062 16.4648C53.2031 17.7539 52.5586 19.1211 51.9727 20.5664L67.9102 28.5352C67.9102 30.6445 67.5 32.5781 66.6797 34.3359C65.8984 36.0938 64.8438 37.5977 63.5156 38.8477C62.1875 40.0977 60.625 41.0742 58.8281 41.7773C57.0312 42.4414 55.1367 42.7734 53.1445 42.7734ZM14.8828 42.7734C12.6562 42.7734 10.625 42.4414 8.78906 41.7773C6.95312 41.0742 5.39062 40.1172 4.10156 38.9062C2.8125 37.6562 1.79688 36.1523 1.05469 34.3945C0.351562 32.6367 0 30.6836 0 28.5352C0 26.3086 0.390625 23.9844 1.17188 21.5625C1.99219 19.1406 3.16406 16.6992 4.6875 14.2383C6.21094 11.7773 8.04688 9.35547 10.1953 6.97266C12.3828 4.55078 14.8633 2.22656 17.6367 0L24.375 5.27344C23.0859 6.60156 21.9141 7.87109 20.8594 9.08203C19.8438 10.293 18.9062 11.5039 18.0469 12.7148C17.1875 13.9258 16.3867 15.1758 15.6445 16.4648C14.9414 17.7539 14.2969 19.1211 13.7109 20.5664L29.6484 28.5352C29.6484 30.6445 29.2383 32.5781 28.418 34.3359C27.6367 36.0938 26.582 37.5977 25.2539 38.8477C23.9258 40.0977 22.3633 41.0742 20.5664 41.7773C18.7695 42.4414 16.875 42.7734 14.8828 42.7734Z" fill="white" fill-opacity="0.2"/>
+                                </svg>
+                                
+                            <p>Je n’ai pas été déçu, c’est à l’image de ce que j’avais pu voir de la conférence : simple, didactique, complet et sans prise de tête. Et aussi très atypique.<br>
+                            Atypique parce que c’est une des premières fois que je trouve un livre qui couvre tout le sujet de la conception d’un formulaire, des étapes de réflexion aux étapes de développement (ou presque) en passant par le suivi ou l’accessibilité. Très souvent, on a ces informations dans des sources séparées : les questions d’ergonomie d’un côté, les question techniques de l’autre, l’accessibilité... ah bah non, pas l’accessibilité.</p>
+                            <div class="testimonial-peops">
+                                <img src="img/jeremy.jpg" alt="" width="72"  height="72">
+                                <div class="testimonial-peops-detail">
+                                    <cite><a href="https://lepiolet.fr/articles/formulaires-web-les-erreurs-a-eviter-qui-vous-coutent-cher-geoffrey-crofte/">Jérémy Le Piolet</a></cite>
+                                    <p>Concepteur/développeur d’interfaces utilisateur @Groupama</p>
+                                </div>
+                            </div>
+                        </blockquote>
+                        <blockquote>
+                            <svg role="presentation" tabindex="-1" width="68" height="43" viewBox="0 0 68 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M53.1445 42.7734C50.918 42.7734 48.8867 42.4414 47.0508 41.7773C45.2148 41.0742 43.6523 40.1172 42.3633 38.9062C41.0742 37.6562 40.0586 36.1523 39.3164 34.3945C38.6133 32.6367 38.2617 30.6836 38.2617 28.5352C38.2617 26.3086 38.6523 23.9844 39.4336 21.5625C40.2539 19.1406 41.4258 16.6992 42.9492 14.2383C44.4727 11.7773 46.3086 9.35547 48.457 6.97266C50.6445 4.55078 53.125 2.22656 55.8984 0L62.6367 5.27344C61.3477 6.60156 60.1758 7.87109 59.1211 9.08203C58.1055 10.293 57.168 11.5039 56.3086 12.7148C55.4492 13.9258 54.6484 15.1758 53.9062 16.4648C53.2031 17.7539 52.5586 19.1211 51.9727 20.5664L67.9102 28.5352C67.9102 30.6445 67.5 32.5781 66.6797 34.3359C65.8984 36.0938 64.8438 37.5977 63.5156 38.8477C62.1875 40.0977 60.625 41.0742 58.8281 41.7773C57.0312 42.4414 55.1367 42.7734 53.1445 42.7734ZM14.8828 42.7734C12.6562 42.7734 10.625 42.4414 8.78906 41.7773C6.95312 41.0742 5.39062 40.1172 4.10156 38.9062C2.8125 37.6562 1.79688 36.1523 1.05469 34.3945C0.351562 32.6367 0 30.6836 0 28.5352C0 26.3086 0.390625 23.9844 1.17188 21.5625C1.99219 19.1406 3.16406 16.6992 4.6875 14.2383C6.21094 11.7773 8.04688 9.35547 10.1953 6.97266C12.3828 4.55078 14.8633 2.22656 17.6367 0L24.375 5.27344C23.0859 6.60156 21.9141 7.87109 20.8594 9.08203C19.8438 10.293 18.9062 11.5039 18.0469 12.7148C17.1875 13.9258 16.3867 15.1758 15.6445 16.4648C14.9414 17.7539 14.2969 19.1211 13.7109 20.5664L29.6484 28.5352C29.6484 30.6445 29.2383 32.5781 28.418 34.3359C27.6367 36.0938 26.582 37.5977 25.2539 38.8477C23.9258 40.0977 22.3633 41.0742 20.5664 41.7773C18.7695 42.4414 16.875 42.7734 14.8828 42.7734Z" fill="white" fill-opacity="0.2"/>
+                                </svg>
+                                
+                            <p>Contenu très accessible, même pour moi qui suis marketer. Au début je me suis dis “oula 254 pages, peut-être que ça va long pour du simple formulaire” au final pas du tout&nbsp;!</p>
+                            <p>Je trouve le contenu utile pour tous professionnels qui cherchent à créer des formulaires orientés client et qui ont aussi une vision “business” puisque tout ce qui est expliqué impacte l’expérience, les conversions et donc les chiffres. Tu vises un public très large et ton contenu est adapté et bien expliqué.</p>
+                            <div class="testimonial-peops">
+                                <img src="img/dondu.jpg" alt="" width="72"  height="72">
+                                <div class="testimonial-peops-detail">
+                                    <cite><a href="https://www.linkedin.com/in/dondu-karabinar-a194ab140/">Dondu Karabinar</a></cite>
+                                    <p>Marketing &amp; Digital Specialist @Axa Luxembourg</p>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <section id="benefits" class="accent-alternate">
+                <div class="container left-layout">
+                    <div class="content">
+                        <h2>Les bénéfices directs <span>pour vous</span></h2>
+
+                        <p class="subtitle">On ne sait jamais trop à quoi s’attendre avant la lecture d’un livre. Voici ce que mes lecteurs et lectrices révèlent à sa lecture.</p>
+
+                        <ul class="benefits">
+                            <li class="benefits-item">
+                                <svg role="presentation" tabindex="-1" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="20" cy="20" r="20" fill="var(--color-accent-alternate)"/>
+                                    <path d="M11.125 20.875L16.875 26.875L27.375 12.375" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                                <details open>
+                                    <summary>Une relation inter-équipes améliorée</summary>
+
+                                    <p>Traite des connaissances à partager entre  designers et développeurs aux professionnels comme les PO, Business Analysts, et Rédacteurs de spécifications, peu familiers des problématiques d’interface utilisateur.</p>
+                                </details>
+                            </li>
+
+                            <li class="benefits-item">
+                                <svg role="presentation" tabindex="-1" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="20" cy="20" r="20" fill="var(--color-accent-alternate)"/>
+                                    <path d="M11.125 20.875L16.875 26.875L27.375 12.375" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                                <details>
+                                    <summary>De nouvelles connaissance concrètes activables</summary>
+
+                                    <p>Vous apprendrez forcément plusieurs choses activables dans vos projets et dont les bénéfices seront immédiats.</p>
+                                </details>
+                            </li>
+
+                            <li class="benefits-item">
+                                <svg role="presentation" tabindex="-1" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="20" cy="20" r="20" fill="var(--color-accent-alternate)"/>
+                                    <path d="M11.125 20.875L16.875 26.875L27.375 12.375" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                                <details>
+                                    <summary>Des exemples et anecdotes réutilisables</summary>
+
+                                    <p>Je prends le temps de vous fournir de vrais exemples qui proviennent d’expérience de recherche. De la matière pour défendre vos décisions de design.</p>
+                                </details>
+                            </li>
+
+                            <li class="benefits-item">
+                                <svg role="presentation" tabindex="-1" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="20" cy="20" r="20" fill="var(--color-accent-alternate)"/>
+                                    <path d="M11.125 20.875L16.875 26.875L27.375 12.375" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                                <details>
+                                    <summary>Des conseils simples et progressifs</summary>
+
+                                    <p>Inutile de tout chambouler d’un coup dans vos projets. Retenez ce qui vous parle et vous concerne le plus, et implémentez-les un par un à votre rythme.</p>
+                                </details>
+                            </li>
+
+                            <li class="benefits-item">
+                                <svg role="presentation" tabindex="-1" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="20" cy="20" r="20" fill="var(--color-accent-alternate)"/>
+                                    <path d="M11.125 20.875L16.875 26.875L27.375 12.375" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                                <details>
+                                    <summary>De nombreuses ressources disponibles</summary>
+
+                                    <p>Profitez d’un grand nombre de ressources avec des liens vers des articles, documentation et références, et <a href="">d’une checklist formulaire</a>.</p>
+                                </details>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="decoration">
+                        <svg class="banner-background-svg-2" tabindex="-1" role="presentation" width="730" height="730" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="365" width="516.188" height="516.188" transform="rotate(45 365 0)" fill="url(#paint0_linear_844_1901)"></rect>
+                            <rect x="364.924" y="83.9902" width="397.408" height="397.408" transform="rotate(45 364.924 83.9902)" fill="url(#paint1_linear_844_1901)"></rect>
+                            <rect x="365.168" y="121.529" width="344.319" height="344.319" transform="rotate(45 365.168 121.529)" fill="url(#paint2_linear_844_1901)"></rect>
+                            <rect x="365.168" y="159.223" width="291.013" height="291.013" transform="rotate(45 365.168 159.223)" fill="url(#paint3_linear_844_1901)"></rect>
+                            <rect x="365.168" y="190.894" width="246.108" height="246.108" transform="rotate(45 365.168 190.894)" fill="url(#paint4_linear_844_1901)"></rect>
+                            <rect x="365.168" y="249.258" width="163.57" height="163.57" transform="rotate(45 365.168 249.258)" fill="url(#paint5_linear_844_1901)"></rect>
+                            <defs>
+                                <linearGradient id="paint0_linear_844_1901" x1="381.061" y1="14.6707" x2="881.657" y2="515.267" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#751074"></stop>
+                                <stop offset="0.505208" stop-color="#930C7A"></stop>
+                                <stop offset="1" stop-color="#AC168E"></stop>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_844_1901" x1="377.289" y1="95.285" x2="762.693" y2="480.689" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#E91E7F"></stop>
+                                <stop offset="1" stop-color="#E11B7C"></stop>
+                                </linearGradient>
+                                <linearGradient id="paint2_linear_844_1901" x1="375.881" y1="131.315" x2="709.8" y2="465.234" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#BD1174"></stop>
+                                <stop offset="1" stop-color="#D31577"></stop>
+                                </linearGradient>
+                                <linearGradient id="paint3_linear_844_1901" x1="374.223" y1="167.494" x2="656.446" y2="449.717" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#BC1274"></stop>
+                                <stop offset="1" stop-color="#B31072"></stop>
+                                </linearGradient>
+                                <linearGradient id="paint4_linear_844_1901" x1="372.825" y1="197.888" x2="611.5" y2="436.562" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#940E73"></stop>
+                                <stop offset="1" stop-color="#900C72"></stop>
+                                </linearGradient>
+                                <linearGradient id="paint5_linear_844_1901" x1="370.257" y1="253.907" x2="528.886" y2="412.536" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#680B77"></stop>
+                                <stop offset="1" stop-color="#6B0A70"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <img src="img/kindle-geoffrey-crofte-livre-formulaire-web.png" alt="Le livre sur les formulaires web de Geoffrey dans une liseuse Kindle, affichant le chapitre sur les bases ergonomiques d’un formulaire" width="452" height="456">
+                    </div>
+                </div>
+            </section>
+
             <section id="synopsis" class="light">
                 <div class="container col-small">
                     <h2>Synopsis du livre</h2>
-                    <p>Chaque jour, des milliards de personnes naviguent sur le web à la recherche d'informations, de produits ou de services. Au cœur de cette expérience numérique se trouvent les formulaires web, ces petites boîtes de dialogue qui nous demandent de renseigner des informations. À première vue, ils semblent simples, mais détrompez-vous&nbsp;: ils sont le pont entre vos visiteurs et vos objectifs en ligne.</p>
+                    <p>Chaque jour, des milliards de personnes naviguent sur le web à la recherche d’informations, de produits ou de services. Au cœur de cette expérience numérique se trouvent les formulaires web, ces petites boîtes de dialogue qui nous demandent de renseigner des informations. À première vue, ils semblent simples, mais détrompez-vous&nbsp;: ils sont le pont entre vos visiteurs et vos objectifs en ligne.</p>
                     
-                    <p>Après <span class="years">14</span> ans à plonger dans l'univers complexe des formulaires web, j'ai découvert un monde fascinant où l'ergonomie, l'accessibilité et la performance se conjuguent pour façonner l'expérience de l'utilisateur. Dans cet e-book, je vais partager avec vous les secrets pour créer des formulaires qui captivent, convertissent et satisfont vos visiteurs.</p>
+                    <p>Après <span class="years">14</span> ans à plonger dans l’univers complexe des formulaires web, j’ai découvert un monde fascinant où l’ergonomie, l’accessibilité et la performance se conjuguent pour façonner l’expérience de l’utilisateur. Dans cet e-book, je vais partager avec vous les secrets pour créer des formulaires qui captivent, convertissent et satisfont vos visiteurs.</p>
     
-                    <p>Imaginez un formulaire qui semble anticiper les besoins de l'utilisateur, qui réduit les erreurs de saisie, qui se charge rapidement sur tous les appareils et qui accueille chaque visiteur, quel que soit son handicap. C'est possible, et c'est exactement ce que nous allons explorer ensemble.</p>
+                    <p>Imaginez un formulaire qui semble anticiper les besoins de l’utilisateur, qui réduit les erreurs de saisie, qui se charge rapidement sur tous les appareils et qui accueille chaque visiteur, quel que soit son handicap. C’est possible, et c’est exactement ce que nous allons explorer ensemble.</p>
     
-                    <p>Que vous soyez un professionnel du web, un entrepreneur ou simplement curieux de découvrir les coulisses de la conception des formulaires web, ce livre est fait pour vous. Préparez-vous à plonger dans le monde passionnant de l'ergonomie et de la qualité des formulaires web, où chaque détail compte et où chaque amélioration peut transformer l'expérience de vos utilisateurs.</p>
+                    <p>Que vous soyez un professionnel du web, un entrepreneur ou simplement curieux de découvrir les coulisses de la conception des formulaires web, ce livre est fait pour vous. Préparez-vous à plonger dans le monde passionnant de l’ergonomie et de la qualité des formulaires web, où chaque détail compte et où chaque amélioration peut transformer l’expérience de vos utilisateurs.</p>
     
-                    <p>Êtes-vous prêt à découvrir les secrets des formulaires web qui font la différence&nbsp;? Alors, plongeons ensemble dans ce voyage captivant vers l'accessibilité, la performance et l'excellence&nbsp;!</p>
+                    <p>Êtes-vous prêt à découvrir les secrets des formulaires web qui font la différence&nbsp;? Alors, plongeons ensemble dans ce voyage captivant vers l’accessibilité, la performance et l’excellence&nbsp;!</p>
 
                     <p class="cta">
-                        <a class="button" href="https://shop.geoffreycrofte.com/b/e-book-formulaire-web-les-erreurs-a-eviter-qui-vous-coutent-cher-geoffrey-crofte">J'achète ce livre</a>
+                        <a class="button" href="https://shop.geoffreycrofte.com/b/e-book-formulaire-web-les-erreurs-a-eviter-qui-vous-coutent-cher-geoffrey-crofte">J’achète ce livre</a>
                     </p>
                 </div>
                 <img src="./img/ameliorez-l-experience-utilisateur-de-vos-formulaire-web-geoffrey-crofte.png" width="1575" height="2229" alt="" class="cover">
@@ -205,7 +394,7 @@
                     
                     <h2 id="plan-title">Plan de l’e-book <span class="small">“Formulaire Web, les erreurs à éviter qui vous coûtent cher”</span></h2>
 
-                    <p>L'avantage d'un e-book, c'est que son plan pourrait évoluer et s'étoffer avec le temps. Voici ce qui est à l'ordre du jour pour le moment.</p>
+                    <p>L’avantage d’un e-book, c’est que son plan pourrait évoluer et s’étoffer avec le temps. Voici ce qui est à l’ordre du jour pour le moment.</p>
 
                     <ol aria-labelledby="plan-title" class="col plan">
                         <li>Les définitions possibles d’un formulaire web</li>
@@ -218,11 +407,11 @@
                         <li>De l’importance de la recherche utilisateur</li>
                         <li>Le suivi et la mesure</li>
                         <li>Rendez vos formulaires accessibles&nbsp;: définition et solutions</li>
-                        <li>Quelques cas d'usage&nbsp;: challenges et esprit critique</li>
+                        <li>Quelques cas d’usage&nbsp;: challenges et esprit critique</li>
                     </ol>
 
                     <p class="cta">
-                        <a class="button is-secondary" href="https://shop.geoffreycrofte.com/b/e-book-formulaire-web-les-erreurs-a-eviter-qui-vous-coutent-cher-geoffrey-crofte">Ce livre m'intéresse</a>
+                        <a class="button is-secondary" href="https://shop.geoffreycrofte.com/b/e-book-formulaire-web-les-erreurs-a-eviter-qui-vous-coutent-cher-geoffrey-crofte">Ce livre m’intéresse</a>
                     </p>
                 </div>
             </section>
@@ -230,9 +419,9 @@
             <section class="alternate" id="subscribe">
                 <div class="container centered">
                     <div class="col">
-                        <p class="hovertitle">Découvrez d'autres e-book</p>
+                        <p class="hovertitle">Découvrez d’autres e-book</p>
                         <h2>Recevez les nouvelles sorties&nbsp;</h2>
-                        <p>Pour ne pas manquer les prochaines sorties et les promotions de lancement, rejoignez les personnes inscrites à cette newsletter. Vous ne recevrez jamais de spam de ma part, je n'aime pas cela non plus.&nbsp;😊</p>
+                        <p>Pour ne pas manquer les prochaines sorties et les promotions de lancement, rejoignez les personnes inscrites à cette newsletter. Vous ne recevrez jamais de spam de ma part, je n’aime pas cela non plus.&nbsp;😊</p>
                     </div>
 
                     <form method="post" action="https://sendfox.com/form/3l5yol/1k0ryy" class="sendfox-form form" id="1k0ryy" data-async="true" data-recaptcha="false">
@@ -251,7 +440,7 @@
 
                         <p class="legal">En validant l’inscription vous acceptez que je vous recontacte pour recevoir ce contenu éducatif. Vous pouvez vous désinscrire à n’importe quel moment.</p>
 
-                        <p><button type="submit" class="button" aria-label="M’inscrire pour revecoir les nouvelles publications" id="submit-form">Je m'inscris</button></p>
+                        <p><button type="submit" class="button" aria-label="M’inscrire pour revecoir les nouvelles publications" id="submit-form">Je m’inscris</button></p>
                     </form>
                     <script src="https://sendfox.com/js/form.js"></script>
 
@@ -266,7 +455,11 @@
                     <img src="https://geoffreycrofte.com/logo.svg" loading="lazy" width="283" height="67" alt="Geoffrey Crofte - Lead UX Designer">
                 </a>
             </p>
-            <p class="copyright">Tous droits réservés - Œuvre auto-éditée. ISBN 978-99959-0-814-0.</p>
+            <p class="copyright">
+                Tous droits réservés - Œuvre auto-éditée.
+                <br>
+                e-ISBN&nbsp;978-99959-0-814-0 — ISBN&nbsp;978-99987-745-0-6
+            </p>
         </footer>
     </div>
 
