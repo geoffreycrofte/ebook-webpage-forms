@@ -837,6 +837,7 @@ svg:focus {
 
     .banner-background-svg-2 {
         transform: translateX(65%) translateY(-25%);
+        top: 60%;
     }
 
     .theme-2 .banner-background-svg-1 {
@@ -844,6 +845,7 @@ svg:focus {
     }
     .theme-2 .banner-background-svg-2 {
         transform: scale(0.45) translateX(135%) translateY(-65%);
+        top: 50%;
     }
 
     .banner .container {
@@ -869,7 +871,7 @@ svg:focus {
     }
 
     .decoration .banner-background-svg-2 {
-        top: 65%;
+        top: 70%;
     }
 
     .centered-layout h2 {
