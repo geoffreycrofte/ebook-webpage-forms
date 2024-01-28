@@ -798,6 +798,10 @@ svg:focus {
 
 @media (max-width: 800px) {
 
+    body {
+        --v-spacing: 56px;
+    }
+
     .gallery {
         display: block;
     }
@@ -868,10 +872,19 @@ svg:focus {
         top: 65%;
     }
 
+    .centered-layout h2 {
+        text-align: left;
+    }
+
     /* Available on */
     .available-on {
         margin: 0 auto calc(-1 * var(--v-spacing));
     }
+
+    .available-on p {
+        margin: 0;
+    }
+
     .available-on,
     .available-on ul {
         flex-wrap: wrap;
@@ -882,8 +895,34 @@ svg:focus {
         flex-wrap: wrap;
     }
 
+    .quotes blockquote {
+        padding: 0;
+        margin: 32px 0 0 0;
+    }
+
+    blockquote svg {
+        left: 40px;
+    }
+
+    .testimonial-peops img {
+        width: 56px;
+        height: 56px;
+    }
+
+    .testimonial-peops-detail cite {
+        font-size: 1.25rem;
+    }
+
+    .testimonial-peops-detail p {
+        font-size: 0.875rem;
+    }
+
     /* Plan */
     .plan li {
         font-size: 1rem;
+    }
+
+    p.copyright {
+        font-size: 0.75rem;
     }
 }
