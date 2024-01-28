@@ -71,7 +71,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     line-height: 1.4;
     color: var(--color-title);
 }
@@ -130,11 +131,26 @@ a {
 }
 
 h2 span {
+    color: var(--color-hovertitle);
+}
+
+.accent-alternate h2 span {
     color: var(--color-accent-alternate);
 }
 
+.pt-0.pt-0.pt-0 {
+    padding-top: 0;
+}
+
 .subtitle {
+    width: 100%;
+    max-width: 604px;
     font-size: 1.125rem;
+}
+
+.centered-layout .subtitle {
+    margin-inline: auto;
+    text-align: center;
 }
 
 details summary {
@@ -357,7 +373,7 @@ section {
 }
 
 .theme-2 .banner-background-svg-1 {
-    transform: scale(0.65) translateX(-75%) translateY(-65%);
+    transform: scale(0.65) translateX(-89%) translateY(-75%);
 }
 
 .banner-background-svg-2 {
@@ -629,6 +645,13 @@ blockquote svg {
 
 .footer a {
     display: inline-block;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.footer a:hover,
+.footer a:focus-visible {
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .footer p {
@@ -641,9 +664,33 @@ blockquote svg {
     width: auto;
 }
 
+.footer h2 {
+    color: var(--color-hovertitle);
+    font-size: 1rem;
+}
+
+/* Variante of the footer */
+.footer.mega {
+    --v-spacing: 56px;
+    padding: 0;
+    text-align: left;
+}
+
+.footer.mega .logo {
+    align-self: center;
+}
+
 p.copyright {
-    font-weight: bold;
+    padding: 24px;
+    margin: 0;
+    background: var(--color-title);
+    color: var(--bg-darker);
+    text-align: center;
     font-size: 0.875rem;
+}
+
+p.copyright span {
+    font-weight: bold;
 }
 
 svg:focus {
@@ -666,7 +713,26 @@ svg:focus {
     transform: translateX(-64px);
 }
 
+/* gallery within a book page */
+.container > .gallery {
+    gap: 80px;
+}
+.container > .gallery article {
+    padding: 0;
+    background: transparent;
+}
+
+.container > .gallery article.theme-2 {
+    --color-title: var(--bg-body);
+    --color-text: var(--bg-darker);
+}
+
+.container > .gallery article p {
+    font-size: 1rem;
+}
+
 .cta {
+    font-weight: bold;
     margin-top: 2.5rem;
 }
 
@@ -769,7 +835,7 @@ svg:focus {
     }
 
     .theme-2 .banner-background-svg-1 {
-        transform: scale(0.45) translateX(-130%) translateY(-90%);
+        transform: scale(0.45) translateX(-120%) translateY(-98%);
     }
     .theme-2 .banner-background-svg-2 {
         transform: scale(0.45) translateX(120%) translateY(-100%);
@@ -820,6 +886,11 @@ svg:focus {
 
     .book-container {
         width: 100%;
+    }
+
+    .gallery .book-container {
+        margin: 0 auto;
+        transform: translateX(0);
     }
 
     .banner {
@@ -922,6 +993,11 @@ svg:focus {
     /* Plan */
     .plan li {
         font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer.mega .container {
+        gap: 24px;
     }
 
     p.copyright {
