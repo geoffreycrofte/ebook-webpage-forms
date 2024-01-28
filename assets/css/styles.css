@@ -680,11 +680,14 @@ blockquote svg {
     align-self: center;
 }
 
-p.copyright {
+.footer.mega p.copyright {
     padding: 24px;
     margin: 0;
     background: var(--color-title);
     color: var(--bg-darker);
+}
+
+p.copyright {
     text-align: center;
     font-size: 0.875rem;
 }
