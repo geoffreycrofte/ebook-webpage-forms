@@ -126,6 +126,22 @@ p {
     color: var(--color-text);
 }
 
+.text-center {
+    text-align: center;
+}
+
+.font-size-base {
+    font-size: 1rem;
+}
+
+.font-size-baser {
+    font-size: 1.125rem;
+}
+
+.color-primary {
+    color: var(--color-hovertitle);
+}
+
 a {
     color: inherit;
 }
@@ -136,6 +152,16 @@ h2 span {
 
 .accent-alternate h2 span {
     color: var(--color-accent-alternate);
+}
+
+.accent-alternate .button {
+    background: var(--color-accent-alternate);
+    color: var(--bg-body);
+}
+
+.accent-alternate .button:hover,
+.accent-alternate .button:focus-visible {
+    background: white;
 }
 
 .pt-0.pt-0.pt-0 {
@@ -217,6 +243,7 @@ section {
     --color-title: var(--color-common-alternate);
     --color-text: var(--color-common-alternate);
     --color-accent-alternate: #4A80F5;
+    background: var(--bg-body);
 }
 
 .theme-2 .alternate,
@@ -341,6 +368,16 @@ section {
     z-index: 1;
     width: 100%;
     max-width: 604px;
+}
+
+/* Small grid system */
+.cols-3 {
+    display: flex;
+    gap: 24px;
+}
+
+* + .cols-3 {
+    margin-top: 2rem;
 }
 
 /* Specific blocks */
@@ -788,7 +825,7 @@ svg:focus {
 .available-on {
     position: relative;
     top: calc(-1 * var(--v-spacing)/4);
-    z-index: 1;
+    z-index: 6; /* over the decorations */
     display: flex;
     width: 100%;
     max-width: 1055px;
@@ -866,9 +903,12 @@ svg:focus {
 } 
 
 @media (max-width: 800px) {
-
     body {
         --v-spacing: 56px;
+    }
+
+    .cols-3 {
+        flex-direction: column;
     }
 
     .gallery {
@@ -880,7 +920,7 @@ svg:focus {
     }
 
     .langs.langs {
-        margin:: 16px auto 16px;
+        margin: 16px auto 16px;
     }
 
     p {
