@@ -280,7 +280,7 @@
                                 <path d="M39.3333 28.8333L34.6667 23H23V34.6667L30 40.5" stroke="#BE217F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>                                
                             <h3 class="font-size-baser color-primary">Des années d’expérience</h3>
-                            <p class="font-size-base">Je vous ferai bénéficier de plus de 15 ans d’expérience en agence web, startup et dans une société d’assurance.</p>
+                            <p class="font-size-base">Je vous ferai bénéficier de plus de <span class="years">15</span> ans d’expérience en agence web, startup et dans une société d’assurance.</p>
                         </div>
                         <div class="col">
                             <svg width="89" height="88" viewBox="0 0 89 88" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -423,7 +423,7 @@
                     <h2>Synopsis du livre</h2>
                     <p>Chaque jour, des milliards de personnes naviguent sur le web à la recherche d’informations, de produits ou de services. Au cœur de cette expérience numérique se trouvent les formulaires web, ces petites boîtes de dialogue qui nous demandent de renseigner des informations. À première vue, ils semblent simples, mais détrompez-vous&nbsp;: ils sont le pont entre vos visiteurs et vos objectifs en ligne.</p>
                     
-                    <p>Après <span class="years">14</span> ans à plonger dans l’univers complexe des formulaires web, j’ai découvert un monde fascinant où l’ergonomie, l’accessibilité et la performance se conjuguent pour façonner l’expérience de l’utilisateur. Dans cet e-book, je vais partager avec vous les secrets pour créer des formulaires qui captivent, convertissent et satisfont vos visiteurs.</p>
+                    <p>Après <span class="years">15</span> ans à plonger dans l’univers complexe des formulaires web, j’ai découvert un monde fascinant où l’ergonomie, l’accessibilité et la performance se conjuguent pour façonner l’expérience de l’utilisateur. Dans cet e-book, je vais partager avec vous les secrets pour créer des formulaires qui captivent, convertissent et satisfont vos visiteurs.</p>
     
                     <p>Imaginez un formulaire qui semble anticiper les besoins de l’utilisateur, qui réduit les erreurs de saisie, qui se charge rapidement sur tous les appareils et qui accueille chaque visiteur, quel que soit son handicap. C’est possible, et c’est exactement ce que nous allons explorer ensemble.</p>
     
@@ -586,8 +586,9 @@
                 12 * (endDate.getFullYear() - startDate.getFullYear())
             );
         };
-        document.querySelector('.years').innerHTML = Math.floor( getMonthDifference( new Date('2009-01-01'), new Date() )/12 );
-
+        document.querySelectorAll('.years').forEach(function(el){
+            el.innerHTML = Math.floor( getMonthDifference( new Date('2009-01-01'), new Date() )/12 );
+        });
         // On click, get a loader on the button
         const submit = document.getElementById('submit-form');
         submit.addEventListener('click', function(e){
