@@ -7,6 +7,7 @@
     --color-common-alternate: #C5C2F4;
     --bg-body: #100F20;
     --bg-darker: #1E2C42;
+    --gradient-bg: #3C1C83 linear-gradient(to bottom left, #3C1C83, #9D1082);
 
     --color-positive: #46B7B2;
 
@@ -34,13 +35,28 @@
     color: #F0E7E1;
 }
 
+.theme-1 {
+    --color-title: #F0E7E1;
+    --color-text: #D6CEC9;
+    --color-hovertitle: #ce3b93;
+    --color-bg-hover: #680440;
+    --color-accent-alternate: #4A80F5;
+    --color-common-alternate: #C5C2F4;
+    --bg-body: #100F20;
+    --bg-darker: #1E2C42;
+    --gradient-bg: #3C1C83 linear-gradient(to bottom left, #3C1C83, #9D1082);
+}
+
 .theme-2 {
     --color-title: #ebfffb;
     --color-text: #ebfffb;
-    --color-hovertitle: #207f7d;
+    --color-hovertitle: #309290;
     --color-bg-hover: #024850;
+    --color-accent-alternate: #5DBDB4;
+    --color-common-alternate: #d7f7f0;
     --bg-body: #001528;
     --bg-darker: #1E2C42;
+    --gradient-bg: #041527 linear-gradient(to top right, #041527, #1D474F);
 }
 
 .theme-2 ::-moz-selection {
@@ -228,7 +244,9 @@ section {
 }
 
 .alternate,
-.light {
+.light,
+.light .theme-1,
+.alternate .theme-1 {
     background: #F0E7E1;
     --color-hovertitle: #A40162;
     --color-title: var(--bg-body);
@@ -236,13 +254,12 @@ section {
 }
 
 .gradient {
-    background: #3C1C83 linear-gradient(to bottom left, #3C1C83, #9D1082);
+    background: var(--gradient-bg);
 }
 
 .accent-alternate {
     --color-title: var(--color-common-alternate);
     --color-text: var(--color-common-alternate);
-    --color-accent-alternate: #4A80F5;
     background: var(--bg-body);
 }
 
@@ -520,6 +537,7 @@ blockquote svg {
 }
 
 .form input {
+    width: -webkit-fill-available;
     padding: 8px;
     font-size: inherit;
     font-family: inherit;
