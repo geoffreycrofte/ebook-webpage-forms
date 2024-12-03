@@ -184,6 +184,10 @@ h2 span {
     padding-top: 0;
 }
 
+.book-title a {
+    text-decoration: none;
+}
+
 .subtitle {
     width: 100%;
     max-width: 604px;
