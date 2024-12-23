@@ -137,7 +137,8 @@ ol li::before {
     border-radius: 80px;
 }
 
-p {
+p,
+li {
     font-size: 1.25rem;
     color: var(--color-text);
 }
@@ -146,7 +147,13 @@ p {
     text-align: center;
 }
 
-.font-size-base {
+.text-left {
+    text-align: left;
+}
+
+.font-size-base,
+.font-size-base p,
+.font-size-base li {
     font-size: 1rem;
 }
 
@@ -160,6 +167,17 @@ p {
 
 a {
     color: inherit;
+}
+
+button.clean {
+    padding: 0;
+    background: none;
+    border: 0 none;
+    border-radius: 0;
+}
+
+button.clean:focus-visible {
+    outline: 0 none;
 }
 
 h2 span {
@@ -275,8 +293,10 @@ section {
     --color-text: var(--bg-darker);
 }
 
-.light {
-    background: #f2e2e2;
+.light,
+.theme-1 .light,
+.theme-2 .light {
+    background: #fff;
 }
 
 .cover {
@@ -342,7 +362,6 @@ section {
     box-shadow: 0 0 0 4px rgba(255,255,255,.4);
 }
 
-/* Grid system */
 .banner .container  {
     padding-block-start: 8px;
 }
@@ -375,6 +394,10 @@ section {
     display: block;
 }
 
+.centered-layout.is-large {
+    --max-width: 1460px;
+}   
+
 .centered-layout h2 {
     text-align: center;
 }
@@ -395,11 +418,94 @@ section {
 .cols-3 {
     display: flex;
     gap: 24px;
+    padding: 0;
 }
 
 * + .cols-3 {
     margin-top: 2rem;
 }
+
+.grid.cols-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    gap: 40px;
+}
+
+.grid .col .grid-content {
+    position: relative;
+    border: 1px solid color-mix(in oklab, var(--bg-darker) 20%, white) ;
+    max-height: 242px;
+    overflow: hidden;
+    padding: 16px 24px;
+    border-radius: 16px;
+    background-color: white;
+}
+
+.grid .col.is-open {
+    position: fixed;
+    display: flex;
+    align-items: safe center;
+    justify-content: safe center;
+    inset: 0;
+    background: rgba(0,0,0,.7);
+    z-index: 10;
+}
+
+.grid .col.is-open .grid-content {
+    max-height: 3000px;
+    width: clamp(300px, 80%, 540px);
+}
+
+.grid .open-modal,
+.grid .close-modal {
+    width: 1px;
+    height: 1px;
+    margin: -1px 0 0 -1px;
+    top: 16px;
+    right: 24px;
+    cursor: pointer;
+}
+
+.grid .open-modal svg,
+.grid .close-modal svg {
+    position: absolute;
+    right: 24px;
+    top: 16px;
+}
+
+.grid .open-modal::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.grid .col.is-open .open-modal,
+.grid .col .close-modal {
+    display: none;
+}
+
+.grid .col.is-open .close-modal {
+    display: block;
+}
+
+.grid .col .close-modal:focus-visible svg {
+    outline: 2px solid var(--color-hovertitle);
+    border-radius: 8px;
+}
+
+.grid .col:not(.is-open):focus-within {
+    border-radius: 16px;
+    outline: 2px solid var(--color-hovertitle);
+    outline-offset: 2px;
+}
+
+.grid .placeholder {
+    border-radius: 16px;
+    background: var(--color-common-alternate);
+    border: 1px dashed var(--color-hovertitle);
+}
+
 
 /* Specific blocks */
 .banner {
