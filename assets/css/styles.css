@@ -432,6 +432,12 @@ section {
     gap: 40px;
 }
 
+@media (max-width: 960px) {
+    .grid.cols-3 {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+}
+
 .grid .col .grid-content {
     position: relative;
     border: 1px solid color-mix(in oklab, var(--bg-darker) 20%, white) ;
@@ -1116,7 +1122,8 @@ svg:focus {
         top: 70%;
     }
 
-    .centered-layout h2 {
+    .centered-layout h2,
+    .centered-layout .subtitle {
         text-align: left;
     }
 
