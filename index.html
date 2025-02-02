@@ -131,5 +131,42 @@
 		<p>Website &amp; e-books by <a href="https://geoffreycrofte.com/">Geoffrey Crofte</a></p>
 		<p>Language: <a href="/book/" title="English" aria-current="page">EN</a> - <a lang="fr" hreflang="fr" href="/book/fr/" title="Français">FR</a></p>
 	</footer>
+
+	<script>
+		(function () {
+			// On click, get a loader on the button
+			const submit = document.getElementById('submit-form');
+			submit.addEventListener('click', function(e){
+				submit.classList.add('loading');
+			});
+
+			// Check for mutation to make errors more accessible
+			const form = document.getElementById('3e874l');
+			const focusMessage = function(message) {
+				message.setAttribute('tabindex', '-1');
+				message.focus();
+				message.setAttribute('aria-live', 'polite');
+				submit.classList.remove('loading');
+			};
+			const config = { attributes: false, childList: true, subtree: true };
+			const MOcallback = (mutationList, observer) => {
+				for (const mutation of mutationList) {
+					if ( mutation.type === "childList" ) {
+						const message = document.querySelector('.sendfox-message');
+						if ( mutation.addedNodes[0].classList.contains('success') ) {
+							focusMessage(message);
+						}
+						// Separating the two types of message just in case I want to customize the message later like I did in french.
+						if ( mutation.addedNodes[0].classList.contains('error') ) {
+							focusMessage(message);
+						}
+					}
+				}
+			};
+
+			const observer = new MutationObserver(MOcallback);
+			observer.observe(form, config);
+		})();
+	</script>
 </body>
 </html>
