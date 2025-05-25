@@ -24,7 +24,7 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.SSH_PORT || 22 }}
           script: |
-            cd /var/www/geoffreycrofte.com/htdocs/books
+            cd /var/www/geoffreycrofte.com/htdocs/book
             git pull
 
       - name: Send confirmation email
