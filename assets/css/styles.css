@@ -26,12 +26,12 @@
 }
 
 ::-moz-selection {
-    background: #A40162;
+    background: var(--color-bg-hover);
     color: #F0E7E1;
 }
 
 ::selection {
-    background: #A40162;
+    background: var(--color-bg-hover);
     color: #F0E7E1;
 }
 
@@ -69,26 +69,6 @@
     --bg-body: #050828;
     --bg-darker: #02051F;
     --gradient-bg: #02051F linear-gradient(to top right, #02051F, #050828);
-}
-
-.theme-2 ::-moz-selection {
-    background: #024850;
-    color: #fff;
-}
-
-.theme-2 ::selection {
-    background: #024850;
-    color: #fff;
-}
-
-.theme-3 ::-moz-selection {
-    background: #222977;
-    color: #fff;
-}
-
-.theme-3 ::selection {
-    background: #222977;
-    color: #fff;
 }
 
 body,
@@ -460,6 +440,12 @@ section {
     } 
 }
 
+@media (max-width: 540px) {
+    .grid.cols-3 {
+        grid-template-columns: repeat(1, 1fr);
+    } 
+}
+
 .grid .col .grid-content {
     position: relative;
     border: 1px solid color-mix(in oklab, var(--bg-darker) 20%, white) ;
@@ -481,8 +467,9 @@ section {
 }
 
 .grid .col.is-open .grid-content {
-    max-height: 3000px;
-    width: clamp(300px, 80%, 540px);
+    max-height: 90dvh;
+    overflow: auto;
+    width: clamp(300px, 90%, 540px);
 }
 
 .grid .open-modal,
@@ -515,6 +502,19 @@ section {
 
 .grid .col.is-open .close-modal {
     display: block;
+}
+
+@media (max-width: 540px) {
+    .grid .col.is-open .close-modal {
+        position: fixed;
+        top: 32px;
+        right: 50%;
+        transform: translateX(clamp(80px, 45vw, 270px));
+    }
+}
+
+.grid .col.is-open .close-modal svg {
+    background: white;
 }
 
 .grid .col .close-modal:focus-visible svg {
@@ -847,7 +847,8 @@ blockquote svg {
     background: rgba(255, 255, 255, 0.1);
 }
 
-.footer p {
+.footer p,
+.footer li {
     font-size: 1rem;
 }
 
