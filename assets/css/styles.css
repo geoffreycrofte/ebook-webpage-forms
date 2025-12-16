@@ -340,8 +340,8 @@ section {
     opacity: 0.8;
 }
 
-[href*="twitter.com"],
-[href*="linkedin.com"],
+.author [href*="twitter.com"],
+.author [href*="linkedin.com"],
 .testimonial-peops-detail a {
     display: inline-flex;
     align-items: center;
@@ -354,10 +354,10 @@ section {
     transition: all .3s;
 }
 
-[href*="twitter.com"]:hover,
-[href*="linkedin.com"]:hover,
-[href*="twitter.com"]:focus-visible,
-[href*="linkedin.com"]:focus-visible,
+.author [href*="twitter.com"]:hover,
+.author [href*="linkedin.com"]:hover,
+.author [href*="twitter.com"]:focus-visible,
+.author [href*="linkedin.com"]:focus-visible,
 .testimonial-peops-detail a:hover,
 .testimonial-peops-detail a:focus-visible {
     background: rgba(255, 255, 255, .1);
@@ -759,7 +759,7 @@ blockquote svg {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: calc(var(--book-width) * 2);
+    width: calc(var(--book-width) * 1.5);
     height: calc(var(--book-height) * 1.5);
     transform-style: preserve-3d;
     perspective: calc(var(--book-width) * 2);
@@ -780,7 +780,7 @@ blockquote svg {
 .book-container:hover .book,
 .book-container .book:focus {
     perspective: 0;
-    transform: rotateY(0) scale(1.2);
+    transform: rotateY(0) scale(1.2) translateX(45px);
 }
 
 .book-container:hover .book img,
@@ -897,7 +897,7 @@ svg:focus {
 .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(1fr);
+    grid-template-rows: 1fr;
 }
 
 .gallery article {
@@ -923,7 +923,8 @@ svg:focus {
     background: transparent;
 }
 
-.container > .gallery article.theme-2 {
+.container > .gallery article.theme-2,
+.container > .gallery article.theme-3 {
     --color-title: var(--bg-body);
     --color-text: var(--bg-darker);
 }

@@ -314,7 +314,7 @@
                                 <details open>
                                     <summary>Understand WCAG like a pro</summary>
 
-                                    <p>Learn WCAG standards without reading it. Standards is brought to you with simple words, examples and actions to take. (still, references to WCAG are made)</p>
+                                    <p>Learn WCAG standards without reading it. Standards are brought to you with simple words, examples and actions to take. (still, references to WCAG are made)</p>
                                 </details>
                             </li>
                             <li class="benefits-item">
@@ -475,7 +475,7 @@
                 </div>
             </section>
 
-            <section class="light" id="who">
+            <section id="who" class="light">
                 <div class="container centered-layout is-large">
                     <h2 class="text-center"><span>Who</span> is this book for?</h2>
                     <p class="subtitle text-center">Given the title of this book, you're probably wondering if it will be beneficial to you. Here are some insights tailored to different professional profiles to help guide you.</p>
@@ -619,9 +619,28 @@
                                 </svg>                                                                                                
                                 <h3 class="font-size-baser color-primary" id="grid-title-4">Educators, Teachers &amp; Trainers</h3>
                                 <div class="font-size-base text-left">
-                                    
-                                    <p>Educators in design, development, or digital product management can use the book as a resource to teach accessibility principles to their students or teams.</p>
-                                    <p>It provides a foundational understanding and practical tips, making it a perfect guide for incorporating accessibility into curricula or professional training programs.</p>
+                                   <p>Educators and trainers in design, development, or digital product management can use this book as a resource to teach accessibility principles to students or professional teams.</p>
+
+                                    <p><strong>In an academic context</strong>, the book helps to:</p>
+                                    <ul>
+                                        <li>Introduce the fundamental concepts and vocabulary of digital accessibility.</li>
+                                        <li>Provide context around standards (WCAG, RGAA, RAWeb) without limiting the topic to a purely theoretical approach.</li>
+                                        <li>Illustrate real accessibility challenges through concrete examples and use cases.</li>
+                                        <li>Raise awareness of user diversity early in the design and development process.</li>
+                                        <li>Encourage critical thinking and nuance, beyond simplistic rules or checklist-driven thinking.</li>
+                                    </ul>
+
+                                    <p><strong>In a corporate upskilling or professional training context</strong>, the book helps to:</p>
+                                    <ul>
+                                        <li>Align designers, developers, and product stakeholders around a shared understanding of accessibility.</li>
+                                        <li>Quickly identify realistic improvement opportunities within existing products.</li>
+                                        <li>Integrate accessibility pragmatically into workflows without slowing down delivery.</li>
+                                        <li>Equip teams with a common language to collaborate and discuss accessibility more effectively.</li>
+                                        <li>Connect accessibility to concrete business concerns such as product quality, user experience, legal risk, and brand image.</li>
+                                    </ul>
+
+                                    <p>It provides a solid and actionable foundation, suitable both for education and for building accessibility skills within professional teams.</p>
+
                                 </div>
                             </div>
                         </li>
@@ -800,7 +819,7 @@
                 </div>
             </section>
 
-            <section class="alternate" id="subscribe">
+            <section id="subscribe" class="alternate">
                 <div class="container centered">
                     <div class="col">
                         <p class="hovertitle">Discover new ebooks</p>
@@ -851,7 +870,7 @@
                         </article>
                         <article aria-labelledby="book-title-2" class="theme-2">
                             <div class="book-container">
-                                <a href="." class="book">
+                                <a href="." class="book" aria-current="page">
                                     <img src="./img/what-designers-need-to-know-about-accessibility-geoffrey-crofte.jpg"
                                         alt="What Designers Need to Know About Accessibility, by Geoffrey Crofte" width="787" height="1114">
                                 </a>
@@ -863,6 +882,22 @@
                             
                             <p class="cta">
                                 You've just discovered this book&nbsp;😁 <a href="https://shop.geoffreycrofte.com/b/book-what-designers-need-to-know-about-accessibility">Wanna buy it</a>?
+                            </p>
+                        </article>
+                        <article aria-labelledby="book-title-3" class="theme-3">
+                            <div class="book-container">
+                                <a href="." class="book" aria-current="page">
+                                    <img src="../../assets/img/next-one.png"
+                                        alt="What topic for the next book?" width="787" height="1114">
+                                </a>
+                            </div>
+                            <h3 id="book-title-3" class="book-title">
+                                What will be the topic of the next book?
+                            </h3>
+                            <p>Share your ideas, desires, missing online resources that would help you grow, or concepts we'd like to explore together. (Design Systems, accessibility for developers, the evolution of AI-related professions, etc.)</p>
+                            
+                            <p class="cta">
+                                <a href="https://linkedin.com/in/geoffreycrofte" class="button">DM on LinkedIn</a>
                             </p>
                         </article>
                     </div>
@@ -917,7 +952,10 @@
                 12 * (endDate.getFullYear() - startDate.getFullYear())
             );
         };
-        document.querySelector('.years').innerHTML = Math.floor( getMonthDifference( new Date('2009-01-01'), new Date() )/12 );
+        
+        document.querySelectorAll('.years').forEach(function(el){
+            el.innerHTML = Math.floor( getMonthDifference( new Date('2009-01-01'), new Date() )/12 );
+        });
 
         // On click, get a loader on the button
         const submit = document.getElementById('submit-form');
