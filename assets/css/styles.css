@@ -755,6 +755,7 @@ blockquote svg {
     --book-height: 284px;
     --book-width: 200px;
     --book-depth: 50px;
+    --animation-x: 45px;
 
     display: flex;
     align-items: center;
@@ -780,7 +781,7 @@ blockquote svg {
 .book-container:hover .book,
 .book-container .book:focus {
     perspective: 0;
-    transform: rotateY(0) scale(1.2) translateX(45px);
+    transform: rotateY(0) scale(1.2) translateX(var(--animation-x));
 }
 
 .book-container:hover .book img,
@@ -1090,6 +1091,7 @@ svg:focus {
     }
 
     .book-container {
+        --animation-x: 0;
         width: 100%;
     }
 
